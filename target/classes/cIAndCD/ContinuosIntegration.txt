@@ -63,10 +63,27 @@ git config --global user.email "email id"
 to list all untracked files
 git status
 
+All untracked files in red color
 To add files to staging area  (All files, with specific file extention,  file name or folder)
 git add - A
 git add <filename>
 git add *.java
 git add <foldername>
+file colour changes to green
 
+commmit the code to local git repository
+
+git commit -m "Commit Message"
+file color changes to white
+
+Create the account in github and create a repository
+Copy repository URL https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git
+
+Connect local repository to remote repository:
+
+git remote add origin "https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git"
+
+Push the code from local to remote repository:
+
+git push origin master (check the branch name in remote repository)
 	
