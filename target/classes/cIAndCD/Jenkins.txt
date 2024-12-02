@@ -1,0 +1,23 @@
+Jenkins is a continuos integration tool
+Continuos delivery - Releasing code process - from different environments until prod
+
+The process of continuos development and testing is related to CI
+The process of releasing developed code using release management is called CD
+
+Jenkins will pull the code from remote repository to build and test the code
+
+Jenkins pipeline - code, build, test and deploy
+Maven goals can be achived by using jenkins
+most of the time sanity and regression test cases are executed using jenkins
+Jenkins will by default follow headless mode of testing
+
+
+Remote repository : https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git
+
+Install the jenkins: or run war file java -jar jenkins.war
+
+Go to manage jenkins: install required plugins
+configure maven, jdk and git paths in jenkins
+
+Manage Jenkins - Tools - Add JDK, Git and maven paths from system and save it
+

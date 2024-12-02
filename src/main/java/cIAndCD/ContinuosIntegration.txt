@@ -92,4 +92,22 @@ Repeat the above add, commit and push for any additional changes in repository
 To pull the latest updated code in remote repository to local repository:
 
 git pull "https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git"
-	
+
+
+For existing project available in github and  as a new team member you need to clone the repository
+Create an new folder in system
+open git bash
+run clone command
+git clone "https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git"
+Clone will be used one time when there is no project in local and create existing project
+Pull is used when project is available in local to get updated code
+
+All git commands can be executed using eclipse:
+
+default branch is master both in local and remote
+All codes will be maintained in developers own branch both in local and remote
+then code will be merged to main/master branch
+
+
+
+
