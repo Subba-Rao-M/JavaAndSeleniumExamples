@@ -1,0 +1,81 @@
+Selenium WebDriver
+
+1) web driver is a component of Selenium along with IDE and Grid
+2) Webdriver is an interface in Java
+3) Web driver is an API --> Webdriver interacts with browser using its internal methods when called from Java program
+
+webdriver (I) - > Remote WebDriver (C) - >  ChromeDriver (C extends RW), EdgeDriver, Firefoxdriver
+
+Selenium 4
+webdrtiver (I) - > Remote WebDriver (C) - > Chromium Driver - > Edge Driver and ChromeDriver classes
+
+SearchContext(I) is root interface for webdriver
+	WebDriver(I)
+		RemoteWebDriver(C) also implements interfaces JavascriptExecutor(I) and TakeScreenshot(I)
+			
+			ChromeDriver (C extends RW)
+			InternetExplorer
+			Firefoxdriver
+			Chromium Driver(C after Sele 4.x)
+				ChromeDriver
+				Edge Driver
+
+Remote WebDriver class implements WebDriver, JavaScriptExecutor and TakeScreenshot i.e multiple inheritance
+WebDriver, JavaScriptExecutor and TakeScreenshot interfaces dont have direct relationship
+Environment SetUp:
+1) Download webdriver jars files and attach to java project manually
+2) By creating maven project i.e build tool which automatically update the project dependencies
+
+In maven project all dependencies will be managed using pom.xml
+https://mvnrepository.com/
+
+web driver dependency link : <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+
+
+
+JavascriptExecutor interface:
+	executeScript() - method provided to execute java script statements in selenium code
+
+Why it is required
+	WebELement action methods mainly like sendkeys, click internally call java script statements to interact with web elements like text fields, radio, checkbox, buttons and links
+	Some times these methods will not be able to perform action and results in element intercepted exception
+	In such cases use JavascriptExecutor executeScript() method to directly interact with web element
+	
+	
+Screenshots:
+Full page
+specific area
+web element
+
+
+Browser Options:
+ChromeOptions - class
+EdgeOptions, etc
+
+Used to control the settings of browser
+	
+	- Headless testing - testing will be executed in background i,e without showing ui
+		Advantages of headless testing:
+			Can do multiple tasks since script executes in background
+			Faster execution
+		Disadvantages:
+			User cannot see any actions : Ex: If you handover the test cases to new person
+		
+		Initial stage of development prefer headed mode and later once the application scripts are stable go for headless mode
+		When running in Devops or CI mode, prefer headless mode
+
+SSL Handling: options.setAcceptInsecureCerts(true);
+
+Handling browser message browser is handled by automation test software:
+	options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+
+To run test cases incognito mode: options.addArguments("--incognito");
+
+To enable browser extentions at run time: 
+	
+		ChromeOptions options = new ChromeOptions();
+		File file = new File("C:\\automation\\crx files\\selectorshub.crx"); //Enter valid path here
+		options.addExtensions(file);
+
+	

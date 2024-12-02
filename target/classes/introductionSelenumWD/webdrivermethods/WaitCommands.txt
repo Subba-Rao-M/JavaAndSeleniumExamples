@@ -1,0 +1,101 @@
+Web Driver Waits:
+
+Synchronization issue when the automation script execution speed is faster than application page load speed
+Application will throw 
+ElementNotFoundException  - Because of In correct locator
+and NoSuchElementexception - Due to Synchronization problem 
+
+Many factors involve in this like network, application speed
+we cannot control network or application
+So we can control the automation script by adding wait
+
+Handling Synchronization problem:
+
+1) implicit wait
+2) Explicit wait
+	- Also has fluent wait option with additional parameters
+	
+
+Java provides Thread.sleep(5000) command
+
+Advantage of sleep:
+
+Easy to Use
+
+Disadvantages:
+1) if the given time is not sufficient still will get exception
+2) It will wait for the maximum time given in step and it will impact the script performance
+3) Need to use in multiple places
+
+Implicit wait:
+
+Advantages:
+Write after creating driver statement as a single statement
+it is applicable for all lines of code until driver is closed
+it will wait for maximum of time given and if element found before that it will proceed with next step
+No need to write multiple times
+Default value is 0
+and maximum standard time is 10Seconds
+
+Disadvantage:
+If element is not found with in implicit given time, then no such element exception thrown
+
+
+
+Explicit Wait:
+
+IN both implicit wait and Thread.sleep  mainly time is considered
+In explicit and fluent wait condition is considered along with time
+
+2 Steps in explicit wait:
+1. Declaration
+WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(10));
+Wait for 10 seconds
+2. Usage
+
+WebElement searchField = mywait.until(ExpectedConditions.visibilityOfElementLocated(By.name("search")));
+Return the element based on condition
+
+searchField.sendKeys("MAC"); // driver.find element is not used since above statement only returns element
+
+Not to use for all elements only for fields with Synchronization problem
+First priority will be given for condition where exepectedCOnsitionClass methods used to check different conditions
+and then time is considered
+
+Advantages:
+
+1) conditional based, works more effectively
+2) finding element is inclusive (in some cases), no need to write separate method to find elements
+3) It will consider condition to be true then it will wait time
+
+4) have to write multiple statement for multiple elements
+
+if not able to get field with in given time use try and catch block
+
+Fluent Wait:
+
+Part of explicit wait
+
+Sample usage:
+
+   // Waiting 30 seconds for an element to be present on the page, checking
+   // for its presence once every 5 seconds.
+   Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+       .withTimeout(Duration.ofSeconds(30L))
+       .pollingEvery(Duration.ofSeconds(5L))
+       .ignoring(NoSuchElementException.class);
+       
+       Every 5 seconds until 30 seconds(6 times) it will check for element presence if not found and in each 5 seconds response it will ignore the exception mentioned if received
+
+	Usage
+	
+   WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+     public WebElement apply(WebDriver driver) {
+       return driver.findElement(By.id("foo"));
+     }
+   })
+
+
+
+
+

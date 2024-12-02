@@ -1,0 +1,7 @@
+Drop Downs:
+1) Select drop down - Select tag in html code
+
+div tag or button tag  for below two options and there will not be select tag
+2) BootStrap Drop down - can select single or multiple options as well
+3) Hidden drop down -- No select option and no information in html to inspect code and on right click drop down hides value from expaded state
+						values will be dynamically loaded

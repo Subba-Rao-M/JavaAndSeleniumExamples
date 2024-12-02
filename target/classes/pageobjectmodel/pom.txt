@@ -1,0 +1,21 @@
+Page Object Model:
+
+is a design pattern not a framework
+locators and methods related to page is maintained in separate class
+
+Problems without POM
+Duplicate locators and methods in multiple test case classes
+Updating
+
+Identify the number of pages in your application
+For each page create separate class with web elements and actions method
+Test case class includes test methods and validations
+
+2 approches to create page object class:
+	1) Using page factory
+	2) Without using pagefactory
+	
+PageFactory is a class provided by selenium webdriver
+
+Each page will have 3 sections - Constructor, page elements and action methods
+

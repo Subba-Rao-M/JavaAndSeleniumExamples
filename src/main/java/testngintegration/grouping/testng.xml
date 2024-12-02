@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupingSuite">
+  <test thread-count="5" name="GroupingTest">
+    <groups>
+    <run>
+    <include name="sanity">
+    <exclude name="regression" ></exclude><!-- Test only sanity test cases and not test case which is both sanity and regression-->
+    </include>
+    </run>
+    
+    </groups>
+    
+    
+    
+    <classes>
+      <class name="testngintegration.grouping.PaymentsTest"/>
+      <class name="testngintegration.grouping.SignUpTests"/>
+      <class name="testngintegration.grouping.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

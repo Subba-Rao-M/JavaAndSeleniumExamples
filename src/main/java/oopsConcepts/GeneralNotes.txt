@@ -1,0 +1,242 @@
+Object Oriented Programming
+--------------------------
+
+Class
+Object
+Polymorphism
+Encapsulation
+Inheritance
+Data Abstraction
+
+Class :
+	- Is a collection of attributes and behavior.
+	- Animal - Dog, Cat, Elephant, etc
+	- Students - Kim, Test_user1
+	- Employee - John, David, etc
+	- Animal, Students and EMployee - Classes which has attributes and behavior
+	- Class is a blueprint explaining plan
+	- Class is a virtual entity i.e logical entity i.e it will not occupy memory 
+	- Object is physical entity
+	- One class can have multiple objects
+	- Object is a instance of class
+	- Attributes - is variables in class
+	- Behavior is methods in class
+	- Class will have variables and methods
+	- Class is a group of objects
+	
+	class Employee{
+	variables
+	methods
+	}
+	
+	- Object is a instance of class
+	- Object is created using class
+	- N number of objects created for a single class
+	- Objects are physical and it will occupy some memory
+	- object is created using new keyword
+	- syntax: Employee emp = new Employee();
+	- emp is variable with type object
+	- Employee emp1 = new Employee();
+	- Employee emp2 = new Employee(); // n number of objects can be created like this
+	- Employee class will have variables eid, enname, esal, etc
+	- All objects will have copy of above variables acquired to use it when objects are created
+	- Every object will acquire the class variables and methods to use it
+	- Dont initialize any variables in class, it should be done through objects
+	- Methods - should have return type by default void
+	- Java will look for main method always to execute the class
+	- Execution starts from main method
+	- Objects can be created only inside method
+	- Class without main method can be used in other places
+	
+	- IN same package import is not required to access the class
+	- If object tries to access the class in another package then import is required
+	
+	
+	Class - > Variables and methods
+	
+	
+	Methods 
+	- Class variables and methods variable
+	- Methods -- cannot have methods inside it
+	- Methods are group of statements which perform certain tasks
+	- Through objects we can call methods
+	- Methods can be of different types
+		- NO param and no return value
+		- No param and return value
+		- Accept Param and no return value
+		- Both accepts parameters and return value
+	- Builtin in methods -- For String class - length, concat, etc
+	- Custom methods - user defined
+	- int l = s.length() - no param and return value
+	- String sub = s.subString(0,3) - take param and ret sub string value
+	
+
+KEYWORDS:
+
+
+this keyword:
+
+Class can have 2 types of variables:
+
+	- class or instance variable - can be accessed everywhere within class
+	- local variables - Can be accessed with in method where defined
+	- Java dont have concept of global variables
+	
+static Keyword:
+
+	- static variables
+	- static methods
+	- applicable for both variables and method
+	- Static variables and methods  - if static is specified in front of variable or method
+	- Non static variables and methods - if static is not specified
+	
+	- Static variable can be used to overcome
+		- to overcome modification in multiple places for same variable with same data
+		- to save memory
+		- Use only if common data across all objects, if any1 object is also different dont use it with static
+		- It can be updated at common place or using any one of the object which access the data
+	
+	- Static method can access static methods and variables directly
+	- Static method can access Non static methods and variables using object
+	- Non - static methods can access all static and non static methods direclty without object
+	- Specify classname. to access the static variables and methods if it needs to be accessed in another class
+	
+	Class Test{
+	static String s = "Welcome";
+	}
+	
+	Test.s.length()
+	
+	Class System{
+	
+	static PrintStream out;
+	
+	}
+	
+	System.out. all methods related to printstream class can be accessed through out static variable
+	
+	
+	
+	public static void main(String[] args) { }
+	
+	public can be accessed everywhere
+	static main method is constant/common across all classes and JVM looks for it to start execution / main method can be accessed without creating object
+	void main method does not return any value
+	main method accepts String type of array as arguments from command prompt
+	
+	static public void main(String[] args) { }  - Still valid order is not important for static and access modifier
+	
+	public void static main(String[] args) { } - INvalid because return type always should be before method
+	
+	void main(String[] args) public static  { } - Invalid -- after closing method should not write anything and all values should be after {
+	
+	public static void main(int a[]) { } -- Valid This is not JVM looking for but it is still valid normal method not main
+	
+	public static void main(String a[]) { } - Valid main method as JVM looks for String type one dimentional argument
+	
+	How to Pass the parameters to main method:
+	- Only possible through run time
+\\\\
+
+Inheritance of class using extends keyword
+Single, Multi level, Hierachical and Multiple 
+Multiple inheritance not possible
+
+Method Overriding:
+
+ - Method overriding is related to inheritance
+ - At lease 2 classes should be there and 2 methods in different classes
+ - If it is in same class it leads to duplicating
+ - Method created in parent class and same class if created in child class as well it is called overriding
+ - Method overriding - Same name and same data types and number of parameters used but in in different classes
+ - Declaration and return type should not be changed
+ - Body/IMplementation in method of class are different
+ - Return type should be same
+ - Method definition is same and body is different
+ - Method overloading / constructor loading is related to polymorphism 
+ - Method overloading - Same name but different data type of parameters and different number of parameters
+ - Method overloading Can be achieved without inheritance
+ - Overloading dont need extends 
+ 
+ 
+ FINAL keyword:
+ 
+ 	- Can be applied for variables, methods and classes
+ 	- Can be used with variable like constant -- variable value cannot be changed
+ 	- Can be applied for method -- method cannot be overriden in child class
+ 	- can be applied to class - Class cannot be extended and the class cannot be used as parent
+ 	- Static variable method can be changed and final cannot be changed
+ 	- Static method implementation can be changed but for final you cannot override method only can overload
+
+ SUPER Keyword:
+ 
+  - Super keyword  -- Is used only in inheritance
+  - Related to overriding concept also
+  - TO refer immediate parent class instant variable
+  - To invoke immediate parent class method
+  - To invoke immediate parent class constructor
+  - super keyword cannot be applied in multi level inheritance  only immediate parent used
+  - Not applicable for interface
+  
+ 
+ ABstraction
+  - Can be achieved using data abstraction class and interface
+  - Abstraction is a process of hiding implementation and showing only functionality to user
+  - Security kind of feature like encapsulation
+  - 100% abstraction is not possible using abstract class
+  - 100% abstraction possible using interface
+  - Practically only interface is used
+  
+ 
+ INTERFACE:
+ 
+	 - is a blueprint of class
+	 - interface contains final and static variables by default (in class normal can be created)
+	 - interface variable are final and static by default, no need to specify keyword also
+	 - Interface contains abstract methods
+	 - After Java 8 interface also allowed to contains default methods and static methods
+	 - Abstract method contains only definition/signature and not body
+	 - Methods in interface are public by default
+	 - Interface supports functionality of multiple inheritance
+	 - interface defined with interface keyword
+	 - A class extends another class A extends B
+	 - A interface extends another interface C extends D
+	 - But a class implements another interface : class A implements C and Not interface C implements class A
+	 - Object reference for interface can be created but it cannot be instantiate i.e 
+	 - new ClassName() is instantiation i.e process of creating object
+	 - ClassName obj = is called object reference creation
+	 - Interface n = new Interface() is not possible instead we have to use Interface n = new ClassName()
+	 - Object instantiation done for class and assigned to INterface object variable
+	 - Object cannot be created for interface using new keyword
+	 - Interface is parent for class which implements it
+	 - Interface I1 implements I1, I2, I3 -- Multiple inheritance
+	 - Class C implements I1, I2, I3
+	 - Initial development stage you will create only interfaces with abstract methods for requirements
+	 - Later once you know design parts you will implement the abastract methods by creating separate classes
+	 
+	 interface Test{
+	 variables
+	 methods
+	 }
+  
+  
+  	Abstract Method:
+  	
+  	void method_name(); // declare method only and can contain parameter
+  	
+  	default void m2(){
+  	implementation;
+  	}
+	static void m1() {
+		System.out.println(" M1 Static Method");
+	}
+
+
+
+
+
+
+
+
+
+	

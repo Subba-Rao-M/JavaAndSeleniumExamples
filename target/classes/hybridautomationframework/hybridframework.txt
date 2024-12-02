@@ -1,0 +1,183 @@
+Hybrid Automation Framework:
+
+Organize files and folders in structured manner
+Similar files will be grouped together like test data, utility file, screenshots, reports, pages, tests, etc
+Maintenance will be easy
+
+Objectives of framework:
+1) Re-Usability
+	Create once and re-use it
+	Avoid duplicate codes
+2) Maintainability
+	Adding new test case without any issue
+	Updating existing test case or removing it
+3) Readability 
+	Everyone should be able to read the code
+	Simple core java concepts and anyone can use it
+
+	
+Different types of framework
+1) Built in framework - TestNG, JUNIT, PYTEST, Cucumber, robot, etc
+2) Customizable(User defined) framework - Modular, keyword Driven, Data Driven, Hybrid 
+
+Select builtin framework and add on top it customized feature
+
+Phases/Stages in development of automation framework:
+
+1) Analyzing the application under test(AUT)
+	Number of pages
+	Different type of elements present/ how it can be automated / why 
+	What to automate and what not to automate by seeing the application
+	
+2) Choose test cases for automation
+	Manual test cases should be ready
+	If 100 Test Cases - 90 test cases can be automated and 10 Cannot
+	If 90 test cases can be automated, then its 100% automation
+	Prioritize the test cases which can be automated:
+	Sanity Test Cases - P1
+	Data Driven Test Cases / Re-Tests - P2
+	Regression - P3
+	Others - P4
+
+3) Design and Development of Framework
+	Design - Assume folder structure and create blueprint
+			- All team members should follow same pattern and structure
+	Development - Creating all test cases, codes, etc
+
+4) Execution
+	Local execution - Using eclipse
+	Remote execution - Using repository and jenkins/selenium grid
+5) Maintenance - Changes should be part of local and remote repository
+
+
+Demo Application URL - https://tutorialsninja.com/demo/
+
+
+Creating Framework:
+Create a maven project and add all required dependencies:
+	https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	https://mvnrepository.com/artifact/org.testng/testng
+	//To work with excel files
+	https://mvnrepository.com/artifact/org.apache.poi/poi
+	https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+	//To work with log files
+	https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+	https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+	
+	https://mvnrepository.com/artifact/commons-io/commons-io
+	https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	https://mvnrepository.com/artifact/com.aventstack/extentreports
+
+
+Create a folder structure under tests for pageObjects, testBase, testCases and utilities
+
+Create Base page with constructor for page factory
+	Add Page objects for remaining pages by extending base page object class
+
+Under testCases create a test case by calling methods from page object clasess
+	Each class should have 1 test case
+	run the test case using testng
+	Update the test method for random test data
+	Create a base class and extend all test cases with baseclass
+	all reusable methods from test case should be moved to baseclass
+
+Adding logs
+	- Record all events inform of text is called logging
+	- Track the information
+	- Application logs - Events from end user captured here
+	- Automation logs - To track the events for automation scripts
+	- When test case filed trace the information for failure
+	- Log Levels -> All < Trace < Debug < info < warn < Error < Fatal < Off
+	- Appenders - Where to generate logs - in console or file
+	- Loggers - what kind of logs to generate (All < Trace < Debug < info < warn < Error < Fatal < Off)
+	- If high value set, all low level logs also generated
+	- check maven dependencies for log4j2 in pom file
+	- Add log4j2.xml file under resources folder which is used for configuration
+	- Generate logs as file and fix it to info most of the toime so it generates warn and errors also
+	- Update BaseClass for Logger class object from 
+			import org.apache.logging.log4j.LogManager;
+			import org.apache.logging.log4j.Logger;
+	- In setup method add logger = LogManager.getLogger(this.getClass());
+	- Go to test case add log statements logger.info()
+	
+Testing in multiple browsers / OS / Cross browser testing:
+
+	Create a testng.xml file and add the parameters for test for browser and OS
+	Update the Base class to retrieve the value and set it using switch statement
+	Rename the testng.xml to master.xml and execute it
+	
+	Copy the master.xml file and create one more xml file crossbrowsertesting.xml
+	Remove the thread count from test level and add it to suite level
+	Update the parallel value to tests in suite level
+	
+	All xml files should be created at project level not in package level
+
+Reading common values from config.properties file
+	add config.properties file under test resources
+	add common properties like url, user name and password here
+	Implement properties file load and reading data in base class
+	
+
+Create some more page test case
+	Add Login Page and My Account Page page Objects
+	Create LoginTest class
+	Update the master.xml file with new test case class and execute
+	
+Data Driven Test for Login Test Case:
+	Prepare the test data in excel and place it in testData folder
+	Create excel utility under utilities
+	Update the logic to capture logout link
+	Create DataProvider class under utilities to maintain data in 2 dimentional array
+	Add different data providers in above class based on requirement
+	Use the data provider in test case
+	Execute the test case with different type of data
+	
+Grouping of Tests:
+	- Identify for which test category the automation test belongs to and add groups tag
+	- For Test annotation add groups = {"Sanity", "Master", "Regression", etc}
+	- In Base class also for before and after annotations should have groups tag to indicate for which group the setup and tear down methods should be executed
+	- master is mapped for all test cases to execute all test cases
+	- Create a separate testng.xml for grouping i.e grouping.xml
+	- Add always run = true in before and after class if any issue with groups
+	
+Add Extent report to project
+	- Create extent report manager file utility
+	- Check report file name, content, group related, screenshot related properties
+	- testcontext is which test case getting executed
+	- testContext.getCurrentXmlTest() - for current test case from which xml it is getting executed
+	- Add take screenshot method in base class and use it in ontestfail method
+	- If test case is failed, screenshot method will be called form extent report manager ontestfail method(result will have detail of method which is failed to pass to capture screenshot method)
+	- Add in POM <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+	- In testng.xml file add listener entry for extent report
+	- Make the WebDriver driver static in base class since Extent report manager created object while creating screenshot and it refers to new driver instance
+	- SO to avoid conflict make driver as static
+	- Add extent report listener in all testng.xml files
+	
+Run Failed Test Cases:
+	- test-output folder - > check for testng-failed.xml
+	- To execute only failed test cases execute this fail
+	- This fail will be retained until next test failure
+	
+Selenium Grid:
+	- Download selenium server jar and configure standalone hub
+	-  Run below command to start selenium grid
+			java -jar selenium-server-4.15.0.jar standalone
+	- URL to see session http://localhost:4444/ or http://<local-ip>:4444
+	- Update the config.properties file with execution environment with values remote or local
+	- Update the base class setup method to run test cases in remote or local
+	- Run the test case both in local and remote
+
+Docker setup - create docker-compose.yaml file and use commands to run container and run xml file
+
+Maven execution:
+Run the project using pom.xml, command prompt and bat.run files
+Project right click and copy location in command prompt
+Run mvn clean test
+
+
+Crate run.bat file in project
+Place cd project path
+mvn test and save the file
+click on run.bat file to execute the scripts
+
+Push the code to git and git hub

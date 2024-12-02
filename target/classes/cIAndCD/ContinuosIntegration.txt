@@ -1,0 +1,72 @@
+Continuos integration:
+git, github and jenkins
+
+DEV WS#N - Git - > GitHub - All dev codes from their work space will come to git hub
+QA WS#N - Git - > GitHub 
+
+
+
+Every developer will have their local repository maintained using git software
+End of day all codes should be committed to local repository
+Once the changes are done it should be pushed to git hub repository
+
+Sharing the code from local repository to remote is called push
+sharing the code from work space to local repository is called commit
+
+DevOps team perform process automation using maven from git hub
+
+DevOps - 
+	1) Build Creation
+	2) Run Automation
+	3) Build Certification
+	
+	Jenkins
+		Runs automation
+	maven
+		compile code
+		run code
+		test code
+		package 
+		install
+
+Every day devops team perform this operation it is called nightly build
+Devops team take code from development team and build it
+Devops team takes automation script and runs it against build
+They will certify the build if it is working or not
+
+
+As a tester, every day commit the code to local repository and push the working code to github
+
+Pre-Requists
+Install git software
+Create an account with github
+
+git --version --> To check the version
+
+Git and Github workflow:
+
+Working Directory -> Staging Area - > Local Repository - > Remote Repository
+UnTracked Files - > Tracked Files - > Committed File - > Remote File
+				Add       - >     Commit    -> 				Push
+
+initialize empty git local repository				
+git init 
+
+.git is virual and hidden and url looks like below
+Location of project/.git/
+
+Configure git with user name and password:
+
+git config --global user.name "Subba Rao"
+git config --global user.email "email id"
+
+to list all untracked files
+git status
+
+To add files to staging area  (All files, with specific file extention,  file name or folder)
+git add - A
+git add <filename>
+git add *.java
+git add <foldername>
+
+	

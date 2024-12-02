@@ -1,0 +1,107 @@
+XPath - Extensible markup language
+Xpath is address of element
+Xpath works on document object model(DOM)
+DOM is created when web page is run in browser
+
+Types of Xpath:
+
+Absolute Xpath - Full xpath
+	/html/body/div[2]/div/div/form/fieldset[1]/div[2]/div/input
+	Created from root html node and traverses through all path to reach element
+	Attribute is not used in full xpath
+	If path changes due to new element insertion or removal or reposition of element happens, absolute xpath needs to be updated due to hierachy change
+	
+Relative xpath - Partial xpath
+	//*[@id="input-firstname"]
+	Will directly to element using attribute
+	// Relative path
+	* represents tag element
+	in place of * can write the tag name like input
+	If element position or element updated, there is no impact on relative xpath
+
+
+Difference between absolute and relative xpath:
+
+1. Absolute xpath naviagates between root and element node to find it by passing through all elements
+	Relative xpath directly jumps and finds elements using attribute value
+	
+2. Absolute xpath starts with / i.e root node
+	Relative xpath  path starts with //
+
+3. Absolute xpath dont use attributes it uses only tags of element
+	RElative xpath uses attributes
+	
+There is no difference w.r.t performance when using both of them it may be negligible difference
+
+Relative Xpath can be generated
+Automatically - Dev Tools option, ChroPath, Selectorshub
+Manuallay - own xpath using syntax and attibutes of element
+
+Syntax:
+//tagName[@attributeName = 'attributeValue']
+//*[@attributeName = 'attributeValue']
+
+Xpath with single attribute
+
+//img[@title = 'MacBook'];
+
+Xpath with single multiple attribute
+
+"//input[@type='text'][@placeholder='Search']"
+
+Xpath with and or or attributes
+
+"//input[@type='text' and @placeholder='Search']"
+
+"//input[@type='search' or  @placeholder='Search']"
+
+
+xpath using inner text only if the field has inner text like labels, headers and a tags and link texts and input field will not have inner text
+//a[text()='MacBook']
+//a[text()='Desktops']
+//h3[text()='Featured']
+
+
+linktext for a tags
+linktext can be innertext and all innertext cannot be linktext
+linktext should have href attribute
+
+
+Xpath with contains method:
+//tagName[contains(@attributeName, 'attributeValue')]
+where attributeValue may be like substring if it matches partially also element is captured
+similar string contains method
+
+//input[contains(@placeholder, 'arc')]
+
+starts-with
+
+//input[starts-with(@placeholder, 'Sea')]
+
+To handle dynamic attributes which keep on changing run time, we can identify the pattern and use it with contains or starts-with
+Example: Same button Start turns to Stop can locate the element using contains
+//*[contains(@id, 'St')]
+//*[starts-with(@id, 'St')]
+//*[@id= 'Start' or @id = 'Stop']
+//*[contains(text(), 'St')] -- Will not work because field should have inner text s
+//*[contains(text(), '')] -- Checks if any tag has empty inner text like <div></div>
+//*[cotinas(.,  ' '] --- . represens text() operator
+Chained X-Path:
+
+If no attribute and no inner text for an element, then navigate to parent tags
+it is a combination of relative and absolute xpath
+
+//div[@id='logo']/a/img 
+
+where id is parent of a and a is parent of img tag
+
+Difference B/n Xpath and CSS:
+In DOM structure CSS will go throgh top down approach in one direct
+Xpath is multiple directional to identify element in DOM
+
+
+
+
+
+
+

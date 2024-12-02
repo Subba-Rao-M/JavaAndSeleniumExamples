@@ -1,0 +1,70 @@
+Control Statements:
+
+Conditional Statements
+	- If statement
+	- If and else statement
+	- nested if else statement
+	- Switch Case statement
+Looping iterative statement
+	- while loop
+	- do while loop
+	- for loop
+	- for each loop
+Jumping Statements
+
+Switch(variable){
+Case value1: Statements;
+Case value2: Statements;
+Default: Statements
+}
+
+
+loops:
+
+Initialization - starting point
+Conditions -- How many times we have to repeat
+Increment/Decrement  - By how much
+
+
+while(condition){
+statement
+increment/decrement
+}
+
+do{
+Statements;
+increment/decrement;
+
+}while(condition);
+
+Only do while loop has ; at the end to halt the statement
+
+In while loop first condition is checked and then statements executed
+In do while loop statements will be executed first at least one time and for next iteration condition is checked
+
+For loop -- reduces lines of code 
+for (initialization; condition ; increment/decrement){
+statements;
+}
+
+Initialization executed once
+then condition checked
+executed statement
+increment the number
+Check the condition again and if pass execute the statement
+increment and repeat the condition check and so on
+
+
+Which loop to prefer:
+
+if you know the number of iterations then go for for loop
+if you want to execute the statement at least once the go for do while loop
+If you dont know how many times to repeat the loop go with while loop
+
+
+
+
+Jumping Statements:
+break
+continue
+Used with conditional and looping statements

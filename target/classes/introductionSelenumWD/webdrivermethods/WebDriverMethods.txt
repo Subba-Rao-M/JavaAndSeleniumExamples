@@ -1,0 +1,81 @@
+WebDriver Methods:
+
+WebElements or WebObjects on which script operates
+
+5 Types of WebDriver Methods:
+
+1) Get Methods
+2) Conditional Methods
+3) Browser Methods
+4) Navigational Methods
+5) Wait Methods
+
+Get Methods - we can access these methods using web driver interface and works on web pages not on elements
+
+get(url) - > opens the URL on browser
+getTitle() -> returns the title of current page
+getCurrentUrl()  -> returns the url of current page
+getPageSource() - > returns the source code for page --> to check some text or element present in source or not
+getWindowHandle() - > returns id of single browser window - ID is generated dynamically using run time and cannot see it in DOM also and it keeps on changing
+getWindowHandles() -> returns id of multiple browser windows
+
+
+close() - Closes  1 browser window at a time
+quit() - Closes all browser windows open at a time
+
+if only few browser window needs to be closed then based on windowID's we need to close
+get title based on windowid and swithc to it and close it
+By default browser will be focused on first window only and to operate in second window user need to switch to other browser
+
+
+
+Conditional Methods - Can be applied on web elements
+
+returns true or false
+
+isDisplayed() - ELement is displayed on page or not
+isEnabled() - Is enabled or disabled for operational elements. i.e input fields to enter or select values or click buttons
+isSelected() - used for checking if element is selected or not or value in drop down is selected or not
+
+Browser Methods:
+
+close()
+quit()
+
+
+Navigational Methods:
+
+navigate.to() - Opens URL on the browser
+navigate.back()
+navigate.forward()
+navigate.refresh()
+
+Difference between
+
+driver.get()
+driver.navigate.to()
+
+Functionality wise no difference
+internal logic different
+get accepts url in string format
+
+get(String url){
+}
+navigate(url){
+get(String url)
+}
+
+navigate(oject){
+//compares if url in string or object format
+it converts object to string format and then pass to get method
+get()
+
+}
+
+get - accepts url in string format only
+navigate accepts url in string format and object format
+Object comes from other application and to use it navigate method is used
+most of the time get method only used with string url
+
+
+

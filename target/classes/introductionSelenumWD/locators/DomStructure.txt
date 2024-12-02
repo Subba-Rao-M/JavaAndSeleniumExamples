@@ -1,0 +1,23 @@
+Shadow DOM is web technology where development team will load one dom and based on action they will load another dom as shadow roots
+This helps in improving the performance as page loads step by step
+
+document(web page) - shadow host - shadow root - > shadow elements 
+shadow tree  - > shadow root 
+
+If element is present inside shadow dom which cannot be identified using xpath
+only css selector can be used
+
+whichever element holding shadow root is called shadow root
+
+
+document(web page) - shadow host - shadow root - > shadow elements  -- > shadow root -- > element
+
+
+Handle SVG elements:
+
+svg tag present for image elements
+Cannot directly locate xpath for this
+Use selectors path
+
+tag name name:
+

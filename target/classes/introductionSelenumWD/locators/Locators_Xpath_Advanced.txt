@@ -1,0 +1,69 @@
+X-Path Axes:
+when there is no attribute using which element can be identified directly
+
+		3 -------- 2 ---------------1(Ansesstor)
+									|
+									|
+									
+									4 (Parent)
+					
+(Preceding			5				6(Self) 					7	(following sibling)
+					
+					
+							8		9		10 (Child)
+							
+					11     12	13 (Desendent)
+					
+					
+Considering 6 as self node
+4 is parent node for 6
+5 is preceding sibling which comes before 6 and child of 4
+7 is following sibling which comes after 6 and child of 4
+
+8, 9 and 10 care called child nodes for 6
+
+1 is called ancestor node for 6 i.e parent of node 4
+
+11, 12 and 13 care called descendant node for 6 i.e like grand childrens
+
+all nodes are expressed following by ::
+
+
+Examples:
+//img[@title = 'MacBook'] --> is self node
+
+//img[@title = 'MacBook']/parent::div
+//img[@title = 'MacBook']/parent::* --> where * is regular expression pointing to immediate parent
+//img[@title = 'MacBook']/.. ->.. also redirects to parent
+//img[@title = 'MacBook']/parent::Element
+
+//img[@title = 'MacBook']/child::input
+//img[@title = 'MacBook']/input
+
+
+//img[@title = 'MacBook']/ancestor::form
+//img[@title = 'MacBook']/ancestor::*
+
+//img[@title = 'MacBook']/descendant::button
+//img[@title = 'MacBook']/descendant::*
+//img[@title = 'MacBook']//input[1]
+//img[@title = 'MacBook']//button
+
+// will ignore all elements coming in between source and target node
+
+//img[@title = 'MacBook']/preceding::input
+//img[@title = 'MacBook']/following::button
+
+//img[@title = 'MacBook']/preceding::input[first()] -- first preceding sibling
+//img[@title = 'MacBook']/preceding::input[last()] -- last preceding sibling instead of index value
+
+
+Difference between following and following-sibling
+following or preceding for self node is not considering is it sibling or not
+following-sibling and preceding-sibling will find only sibling elements
+
+//img[@title = 'MacBook']/following-sibling::input
+//img[@title = 'MacBook']/preceding-sibling::input
+
+
+

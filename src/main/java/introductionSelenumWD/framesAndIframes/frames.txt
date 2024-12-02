@@ -1,0 +1,32 @@
+Frames and Iframes:
+
+different webpage embedded into another webpage is called iframes/frames or forms
+first switch to iframe from main page
+then operate on iframe elements
+return back to main page
+
+iframe can have inner frames
+
+User will get nosuchelement exception if not switched to frame while interacting with iframe elements
+
+driver.switchTo().frame(name)
+driver.switchTo().frame(id)
+driver.switchTo().frame(WebElement)
+driver.switchTo().frame(index)
+
+
+driver.switchTo().defaultContent(); // To move the driver control out of frame
+cannot switch from one frame to other frame directly
+should come out of frame using above script
+
+if you have only one frame in page then you can use index option
+
+
+
+Switching COmmands:
+
+Switiching browser windows - using getwindowhandles id
+
+Switching to alert
+
+Switching to frames

@@ -1,0 +1,251 @@
+Test NG - Test new generation
+Java based unit testing tool/ library
+
+Advantages:
+
+1) test cases and test suites
+2) Grouping test cases
+3) Prioritize
+4) Parameterize
+5) Parallel test run
+6) Reports
+
+TestNG installation:
+add dependency in eclipse and add to build path
+configure pom file with https://mvnrepository.com/artifact/org.testng/testng
+
+TestNg Annotations:
+
+@Test - to make method as test method
+testng methods will not return anything and will be always void
+test method will  execute all test methods in alphabetical orders by default w.r.t test methods name
+@Test(priority=1) option is used to control the execution order
+Once the priority is provided in test method, order of test method in written in file is not considered
+Priority number can be anything no need to be sequential 
+If priority is not given for test, the default priority is considered as 0
+If 2 methods have same priority, then alphabetical test method names will be considered
+-ve numbers can be provided in priority like -1, -2, etc Ex: ..., -4, -3, -2, -1, 0, 1, 2, 3, 4 ...
+In class if any of the methods without @Test will not be executed in test case file
+If all test case methods dont have annotations then class cannot be executed, i.e testng always looks for @Test methods or any testng annotations
+
+
+Executing testcases:
+single test case file can be executed from file as run as tesng file
+
+Group of test cases should be executed from testng.xml file
+generate automatically -- select the test case file - convert to xml. For multiple test cases use package right click to convert to xml suite
+create own xml file in below format
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testngintegration.OrangeHrmTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+Result - test out put - index.html and emailable report
+
+
+test suite - test cases - test steps => xml file - classes - test method
+
+using tesng.xml
+ - Executed group of test cases as 1 suite
+ - Generated default testng reports
+
+Class level methods
+@BeforeMethod
+@AfterMethod
+@BeforeClass
+@AfterClass
+
+
+@BeforeTest
+@AfterTest
+@BeforeSuite
+@AfterSuite
+ works in test case level based on xml file
+<suite name="Suite">
+  <test name="Test1">
+    <classes>
+      <class name="testngintegration.OrangeHrmTest1"/>
+      <class name="testngintegration.OrangeHrmTest2"/>
+    </classes>
+    
+    <test name="Test2">
+    <classes>
+      <class name="testngintegration.OrangeHrmTest2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+Beforetest and AfterTest can be added in any of above test cases and it will execute for both test cases in Test 1
+Suite level method executed for above entire suite  1 time
+
+Hierarchy  - > Method - > Class - > Test -> Suite
+
+
+Assertions:
+Validations in testng
+all assertions should be used in test method only
+2 types of assertions :
+Hard assertion
+Soft assertion
+
+Method will be same in both cases
+
+hard vs soft assertions
+
+In hard assertion test case execution will stop and not enter to next steps after assertion when the assertion is failed
+In the test method last step should be assertion
+If there any any statement after assertion in rare case go for soft assertion
+
+Hard assertion methods can be accessed using class name as static methods
+Soft assertion methods can be accessed by creating object of softassert class
+In soft assert test method will be pass even if there is any test case step failures
+In sa.assertAll(); should be used to make test method fail if any one of step failed
+
+
+Dependency Tests:
+
+dependency methods
+OpenApp
+Login
+Search
+Adv Search
+Logout
+
+If OpenApp failed remaining method should not be executed
+i.e identify dependency methods and if it is failed don't execute remaining method
+Syntax: dependsOnMethods= {"testLogin", "method2"})
+applicable with only test annotations
+
+Grouping of test cases:
+
+class1 - m1, m2, m3....
+
+Class2 - m4, m5, m6, ....
+
+Class 3 -- m7, m8, m9, .........
+
+Group the above test methods from different classes into different categories like sanity, master, regression etc
+Through xml file using grouping tag, those set of test cases can be executed
+@Test(priority=2, groups = {"sanity", "regression"})
+ for grouping of sanity and regression together one more tag "functional" and use it in xml
+
+  <groups>
+    <run>
+    <include name="sanity">
+    <exclude name="regression" ></exclude>
+    </include>
+    </run>
+    </groups>
+
+    
+    
+ Parameterization:
+ 
+ To provide the data during run time
+ 
+ 1) Using xml file -- Used parallel testing used
+ 2) Using @DataProvider annotation -- Used for data driven testing
+ 	Is a method tag which prepares test data and provides test method
+ 	Avoids looping statement
+ 	If data is small which can be specified in data provider in 2 dimentional array instead of excel
+ 	If data is more from excel sheet read the data in 2 dimentional array and use it in test case
+ 	Multiple data provider methods can be created in single class file which is used in different test methods
+ 	@Test(dataProvider="dp")
+ 	void testLogin(String email, String password) {}
+ 	@DataProvider(name="dp") //Give name for data provider
+	Object[][] loginData(){
+	Object data[][] = { // Test Data can be anything prefer to use object type
+			{"Admin", "admin123"},
+			{"Admin1", "admin123"},
+			{"Admin", "admin12"},
+			{"Admin", "admin123"}
+	};
+	return data; // String 2 dimentional data
+	}
+	In real time separate class with only data providers created
+	Data provider name is important to access it
+	Data provider name should be unique
+	@DataProvider(name="dp", indices= {0,1})  -- indices used to filter the records - first 2 records
+	indices= {0,4} -- 0th and 5th row
+	indices= {0,3,4} -- 0th , 4th and 5th row data
+	indices refers to rows and not range
+	
+Parallel testing using xml file:
+
+Execution happens sequentially(or serial execution) for multiple tests added in testng file
+
+@Parameters({"browser"}) // Pass the name from tesng xml for parameter tag
+
+<parameter name="browser" value="edge"></parameter> inside test tag above classes in testng.xml
+<parameter name="url" value="https://urlhere"></parameter>
+<parameter name="env" value="SYS"></parameter>
+
+
+@Parameters({"browser", "url", "env"})
+void setUp(String br, String url, String env) throws InterruptedException {}
+
+
+<suite name="Suite" thread-count="5" parallel="tests"> 
+Here tests refers to parallel test case execution 
+and threads number of parallel instances 5 means 5 parallel test execution happens by allocating memory for it
+max 2 to 5 threads can be used and default value is 1
+Increasing number of threads takes lot of memory and results in performance issue
+
+ <test name="ChromeTest" parallel="classes"> - Not recommended if there is dependent test cases
+ 
+ 
+Listeners :
+
+Test method can pass, fail or skip
+Based on result some actions can be performed which is called post actions
+Example: Update result to report
+For fail capture the screenshot and update result
+TestCase class for test methods and Listener class for taking post actions
+
+Listener class will not have any test methods or Java methods
+Listener should implement the methods from ITestListener interface
+
+In XML file specify the above listener class and test class automatically trigger ontestpass, fail skip methods
+
+TestNG listener can be implemented in 2 ways
+
+Method 1: 
+
+class MyListener implements ITestListener{
+}
+
+Method 2:
+
+class MyListner extends TestListenerAdapter{
+}
+
+Both options will have same methods
+
+In TestNG ITestListener is already implemented by TestListenerAdapter class
+The methods can be overridden in our class based on project requirement
+
+<suite name="Suite">
+<listeners>
+<listener class-name="testngintegration.listeners.MyListner"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+  
+ Throughout project 1 listener class maintained as utility file
+
+ If there is no xml file in project to run tesng
+ then in test file specify
+ @Listeners(testngintegration.listeners.MyListner.class) above class name
+ Always prefer xml based approach
+ single step instead of calling in all test files
+ 
+ Listener class is used to generate report
+ Extent report is 3rd party not related to testng
+ 
+ Implementing Extent report using post action listener
+ https://mvnrepository.com/artifact/com.aventstack/extentreports
+ 

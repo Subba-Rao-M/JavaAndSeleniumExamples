@@ -1,0 +1,81 @@
+Locators:
+
+Identify the elements using html dom structure uniquely
+
+Basic Locators: directly found by html tag
+
+//To Capture Single Element
+	id
+	name
+	lintext
+	partiallinktext
+	
+//To Capture Multiple or Group of Elements
+	classname
+	tagname
+
+Class and tag name is used to capture group of elements
+	
+Customized Locators:
+	CSS Locator
+		tag and id
+		tag and class
+		tag and attribute
+		tag, class and attribute
+		
+	XPath Locator
+		Absolute Xpath
+		Relative Xpath
+		
+		
+syntax:
+driver.findElement(locator) 
+driver.findElement(By.id()) -- Using By class and id method
+
+TagName:
+
+All images will have same tag name img
+for input fields input
+For buttons button
+for list items li
+
+class is category of elements
+like group of checkboxes have same class name and different value for checkboxes
+
+//To find multiple elements syntax
+
+driver.findElements(locator)
+
+Difference between findelement() and findelements();
+
+findelement will return single element and findelements will return list of elements
+
+Scenario 1:Locator matching with single web element
+driver.findElement(locator) - Return single element and return type WebElement
+driver.findElements(locator) - Return list collection with single element and return type List <WebElement>
+
+
+Scenario 2:Locator matching with multiple web element
+driver.findElement(locator) - Returns only first element in list with return type WebElement
+driver.findElements(locator) - Return list collection with all matching elements and return type List <WebElement>
+
+
+Scenario 3: Locator is not matching with any elements
+
+driver.findElement(locator) - NoSuchElementException
+driver.findElements(locator) - Returns empty list and return type List <WebElement> with size = 0
+
+
+CSS Selectors:
+
+Cascading style sheet
+		tag and id -- > format - > tag#id
+		tag and class -- > format -- > tag.className
+		tag and attribute --> format -- > tag[attribute = value] -- Value can be with in "" or ''
+		tag, class and attribute --> tag.className[attribute = value] 
+
+tag is common in all above options and also optional
+if both id and classname is not available use any other attribute
+
+
+	

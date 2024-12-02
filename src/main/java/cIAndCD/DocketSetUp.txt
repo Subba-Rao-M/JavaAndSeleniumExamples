@@ -1,0 +1,131 @@
+Docker:
+Docker follows containerization
+Physical machines - > Virtual machines usng vmwares Virtualization - > 
+Containerization 
+
+https://hub.docker.com/ -- official website
+Dockerhub is a repository which contains n number of images and maintain it
+image is used create containers
+ex: linux image will be created when it is downloaded and act as linux containers
+For 1 image we can create 1 container
+
+Docker software download and restart the system
+
+Command Prompt
+docker version
+docker-compose version
+if error go to windows services - docker desktop services - restart it (stop and restart) if still not working restart system again
+
+All docker operations can be performed through docker command only
+
+Basic Commands:
+
+docker -v  // only docker version 
+
+docker info // all information related to docker
+
+To get help 
+docker --help
+
+To login to docker hub
+docker login
+
+To work with images related command
+
+In docker hub also images section can be seen for all images created
+
+to list the images downloaded earlier
+***docker images
+displays below details for installed images
+repository - image name
+tag - version
+image id
+created and size
+
+To pull image from docker hub
+***docker pull <image_name>
+docker pull ubuntu //latest version will be downloaded
+
+to remove image
+***docker rmi <image_id>
+
+To work with containers:
+To know running containers in system
+*** docker ps
+container id, image, etc
+
+To create container
+docker run <imagename>
+docker run Ubuntu
+If image is already present it will get existing image and create container
+If image is not present then it will get image and the create container
+docker run internally will call docker pull image name
+
+to start container
+docker start ubuntu
+docker stop ubuntu - to stop
+docker rm <container id or name> -- to remove container only stopped containers can be deleted
+
+To interact with container
+docker run -it ubuntu
+
+For one image we can create multiple containers
+
+
+System related commands:
+docker stats - to know about cpu, memory usage
+docker system df - > disk related images
+
+To remove all stopped containers:
+docker system prune -f
+
+
+For Selenium automation:
+
+Create 3 images and containers for below
+1) hub
+2) linux-firefox (node1)
+3) linux-chrome  (node 2)
+
+All 3 should be connected
+docker pull selenium/hub
+docker pull selenium/node-firefox
+docker pull selenium/node-chrome
+
+verify images:
+docker images
+
+create containers using above images in same network connected
+
+docker network create grid
+
+hub:
+docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub
+										N/w namew	node name	image name
+nodes:									
+default port of hub is 4444 and it takes range from 4442 to 4444 it takes any one port in range
+
+-p process
+-d runs in backend
+
+docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub -e SE_EVENT_PUBLISH_PORT=4442 -e SE_EVENT_SUBSCRIBE_PORT=4443 selenium/node-chrome
+
+ 
+docker network rm grid -- to remove the grid
+
+To check what are the nodes and images running:
+
+http://localhost:4444/ui
+
+To overcome above manual setup process using command prompt
+use docker-compose.yaml configuration file as alternative above process
+
+Go to path of docker-compose yaml file in command prompt
+
+C:\MyAutomationLearning\JavaAndSeleniumExamples\ 
+run command -> docker-compose up
+ TO check hub and nodes running state - >http://localhost:4444/console
+ 
+ To increase number of nodes - > docker-compose scale chrome=3
+ 
+ to stop and cleanup containers - > docker-compose down

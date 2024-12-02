@@ -1,0 +1,13 @@
+ Data Driven Testing:
+ 
+  - Understand the functionality
+  - Create test data
+  - Develop automation script
+  - Create utility file to read the test data from excel
+  - 
+  
+  Properties file
+   - Common information required in multiple test cases can be added here like url, user name and password
+   - Key and value pair
+   - No syntax applicable like ", ; etc
+   

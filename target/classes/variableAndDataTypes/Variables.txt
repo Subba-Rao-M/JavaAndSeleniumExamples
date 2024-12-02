@@ -1,0 +1,79 @@
+Variable
+	- is a container which can hold some data
+	- To represent the data we need variables
+	- We can change the value of variable whenever required
+
+DataTypes:
+	- What type of data is stored in variables
+	- Whenever declaring variables we need to specify the data type
+	- Based on data datatype is decided
+
+Syntax:
+	- DataType variable = value(optional);
+
+Different approches of creating variables:
+	int a= 100;
+	int b= 200;
+	int c = 300;
+	//Approach 2 // if all variables are of same data type
+	int a, b, c; // this will give error if written in same scope since already above it is declared as int for same variable
+	a=100; b=200; c= 300;
+	
+	// 3d Approach
+	int a=10, b = 20, c=30;
+	
+Different Data Types:
+
+	- Primitive Data Types
+		- byte, short, int and long - > To represent number without decimals
+		- float and double 			- > To represent decimal numbers
+		- char 						- > To represent single character which is placed inside ''
+		- boolean 					-> To have true or false values
+		- all above data types starts with small case letter
+		- Primitive value can store single value at a time
+		- If data type used more than required data storage, memory wasted
+		- If storing higher value lower data type, - not possible
+		- Prefer to use int as moderate case
+		
+	- Non-Primitive Data Types
+		- Also called as collections or derived data types
+		- String
+		- ArrayList
+		- HashMap
+		- HashSet
+		- All derived data types starts with upper case letter
+		- Multiple values can be stored in single variable
+
+
+
+		Data Type	- Size - Examples
+		byte 		1 byte	int a = 100; int b=-100;
+		short		2 bytes
+		int 		4 bytes	
+		long		8 bytes
+		
+		float		4 bytes	Stores maximum 7 decimal places after number
+		double		8 bytes	After number 15 decimal places allowed
+		
+		char		2 bytes
+		
+		boolean		1 bit							
+
+	
+		final int a =100; final keyword is used to maintain value constant and it cannot be overridden
+		
+
+Java is statically typed programming language
+Python is dynamically typed programming language
+
+Example:
+
+int x =100;
+x="Welcome";
+
+In java above is not allowed and where as in python dynamically data type is identified for x and it will execute.
+x =100; Based on data it will consider int for x
+x="Welcome"; Based on data it will consider String for x
+	
+		
+		

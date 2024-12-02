@@ -1,0 +1,35 @@
+Operators:
+
+Operator is a symbol which will perform operations
+
+int a =10;
+int b=20;
+int c = a+b;
+
+a and b are called operands and =and+ are called operators
+
+Types for Operators:
+Arithmetic Operators : +, -, *, / and % 
+Relation or Comparison Operator : >, >=, <, <=, != and ==
+Logical Operators : && , || and !
+Increment and Decrement Operator: ++ and --
+Assignment Operator: =, +=, -=, *=, /= and %=
+Conditional or Ternary Operator: ?:
+
+
+Difference between == and =
+
+== is comparison operator which will return true or false
+= is assignment operator which will assign the value to the variable
+
+
+once again above operators are devided into 3 categories
+
+Unary Operators 
+	- Operates with single variable
+	- =, +=, -=, *=, /= and %=, ++ and --, !
+Binary Operators
+	- Two variables required
+	- All arithmetic, logical operators excluding !, relation operators
+Ternary Operators - 
+	- THREE variables required

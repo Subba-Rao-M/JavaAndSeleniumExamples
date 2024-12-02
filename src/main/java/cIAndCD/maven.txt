@@ -1,0 +1,39 @@
+Maven is a build tool
+
+pom.xml was used to add dependencies and plugins
+pom will have dependencies to include jar files required projects and
+plugin are used to compile and run our projects
+
+to run project outside eclipse pom.xml should be used
+testng.xml cannot be run outside eclipse
+so it should be added to pom.xml
+testng.xml should be run through pom.xml
+
+plugins added in pom.xml
+1) maven compiler plugin - > to compile the project
+2) maven surefire plugin - > to run the project
+
+plugins also like dependencies from apache and 
+
+build section includes plugins and it should be places before dependencies tag
+
+Right click on pom.xml and run as maven test
+and build should be successful
+
+maven is within available eclipse
+also need to install in system or OS level to execute outside or jenkins
+
+Install maven:
+Download the maven file and extract
+set maven path till bin folder in system environment path variable
+before maven java latest version should be installed
+check mvn -version in command prompt
+
+Project right click and copy location in command prompt
+run mvn test or mvn clean test
+
+Crate run.bat file in project
+Place cd project path
+mvn test and save the file
+click on run.bat file to execute the scripts
+

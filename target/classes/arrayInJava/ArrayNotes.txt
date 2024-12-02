@@ -1,0 +1,37 @@
+Arrays is a collection of elements/set of values of same data type.
+We can store multiple values in single variable
+Homogeneous - Data belongs to same data type
+Heterogeneous - Data belongs to different data types
+
+Syntax:
+
+int a[] = new a[5]; // It will allocate memory location to store 5 values 
+Every location is called as index
+Index starts with 0 and it reached till 4 for above example
+a[0] = 100
+a[1] = 200
+for each index number value stored and until you store the location will be empty
+if you try to enter a[5] = 100; array index out of exception will appear
+
+
+Single dimensional - Only rows
+	- Declare array
+	- Add values to array
+	- Find size of array -- a.length
+	- Read single value of array -- a[0]
+	- Read multiple values of array for (int x  : a) { x ;}
+	- int a[] = new int[5]; 
+	- a[0] = 100; and so on to add values
+	- int a[] = {100, 200, 300, 400, 500}; declare and add values in single line
+Two dimensional / Multi-dimensional - Both rows and columns
+	
+	- Declare array
+	- Add values to array
+	- Find size of array -- both row and column size
+	- Read single value of array -- a[0]
+	- Read multiple values of array for (int x  : a) { x ;}
+	- int a[] = new int[5]; 
+	- a[0] = 100; and so on to add values
+	- int a[] = {100, 200, 300, 400, 500}; declare and add values in single line
+
+

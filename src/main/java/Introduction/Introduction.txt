@@ -1,0 +1,78 @@
+Software Testing:
+	- Release quality software to client or production
+	- Process of finding defects
+	- Performing testing without using any tool is manual testing
+	- Challenges in Manual Testing
+		- Re - testing -> Same test executed multiple times. Time consuming and testing with multiple test data
+		- Regression Testing - > Development will provide builds in multiple iterations and during the process tester has to verify the previously implemented tasks working fine with new changes. 
+								Existing functionality should not be broken because of new changes done by developer. 
+		- Both above are time consuming and lot of efforts required
+		
+	- Why we need automation testing
+		- To overcome the challenges faced in above automation testing tools will used
+	- What is automation testing
+		- Performing the testing using automation tools is called automation testing
+		- Automation tools helps in automating test cases
+		- Test Cases - step by step action need to perform to test the application to verify the expected and actual results are same
+		- Automation tester will convert the above manual test case into automation test script
+		- Programming language supported by tools provide instruction to tool
+		- Using cyclic automation of test cases which reduces dependency on existing manual test cases
+
+Selenium:
+	- Selenium is a web based automation tool or library
+	- Selenium is a collection of components like IDE, WebDriver and Grid
+	- Advantages:
+		- Open Source and Fee
+		- Supports multiple OS, Browsers, Languages
+		- Integration with 3rd party tools
+	- Disadvantages
+		- window based applications not supported(Use AutoIT, Silkui, robot api)
+		- No builtin report(testng, extent and allure reports)
+		- Cannot support excel files(Apache poi)
+		- Graphs and Capcha automation
+
+Programming Types:
+
+	- Structured - C, C++
+	- Object Based - VB, VB Script, Python
+	- Object Oriented - Java, C#, Python, C++
+
+Java:
+
+	- JDK -- Java Development kit
+				- Comes along with JRE and JVM
+				- Used to develop java code
+	- JRE -- Java run time environment
+				- Subset of JDK
+				- Can be installed separately
+				- Required to run java programs
+	- JVM -- Java virtual environment
+				- Heart of Java
+				- Complies and convert java program written into byte code which machine understands
+				- Cannot install separately
+				- Complies code and checks if any syntax error
+				- Executes code and provides result
+	- Set Environment variable for java path in path or can add Java_home and add it to path
+	- java -version - > To know the installed java version
+	
+
+Class Name:
+	- Starts with Capital letter
+	- Cannot include any special character other than _
+	- Class can start with _
+	- Cannot start with numbers but can include after that
+	
+Comments:
+	- Single line //
+	- Multiple Lines /*******************/
+
+Print Data
+	- System.out.println(); Syso and then press Ctrl+Space
+
+	
+	
+
+		
+
+
+

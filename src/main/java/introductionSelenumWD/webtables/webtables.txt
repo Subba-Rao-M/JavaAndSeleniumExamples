@@ -1,0 +1,3 @@
+Static web table - fixed number of rows and columns
+Dynamic web table - fixed columns and rows and data keeps changing
+Pagination table
