@@ -86,4 +86,10 @@ git remote add origin "https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.gi
 Push the code from local to remote repository:
 
 git push origin master (check the branch name in remote repository)
+
+Repeat the above add, commit and push for any additional changes in repository
+
+To pull the latest updated code in remote repository to local repository:
+
+git pull "https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git"
 	
