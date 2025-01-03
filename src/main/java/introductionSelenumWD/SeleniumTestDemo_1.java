@@ -8,7 +8,7 @@ public class SeleniumTestDemo_1 {
 	public static void main(String[] args) {
 		System.out.println("Test");
 		
-		//ChromeDriver driver = new ChromeDriver(); //Can store only chrome browser variable
+		//ChromeDriver driver = new ChromeDriver(); //Can store only chrome browser variable and methods
 		WebDriver driver = new EdgeDriver(); //Valid child storing in parent and other browser also can be stored here
 		driver.get("https://www.opencart.com/");
 		String Title = driver.getTitle();

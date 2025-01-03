@@ -34,4 +34,12 @@ Two dimensional / Multi-dimensional - Both rows and columns
 	- a[0] = 100; and so on to add values
 	- int a[] = {100, 200, 300, 400, 500}; declare and add values in single line
 
-
+Difference between array and arraylist:
+array size remains static or fixed
+Array is a data type to hold group of elements
+Arraylist size dynamically gets updated
+Arraylist is also class and object is created to access the methods
+For array to get size array.lenght is used and for arraylist array.size()
+For arraylist items can be added using add
+to check element is present in arraylist a.contains("value") and in array get the value and then compare
+If normal array convert it to list using arrays.aslist(arrayname)

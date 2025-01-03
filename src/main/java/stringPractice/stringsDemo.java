@@ -120,8 +120,33 @@ public class stringsDemo {
 		//equals()
 		
 		
+		/**
+		 * String s1 = "Welcome";
+		 * String s2 = "Welcome";
+		 * Single object is created for both the values since the value is same
+		 * String s11 = "Test"; Now separate object is created
+		 * Above is called string literals
+		 * 
+		 * String s3 = new String("Welcome");
+		 * String s4 = new String("Welcome");
+		 * 2 separate objects created for above
+		 */
 		
+		String name = "Tieto evry banking pvt ltd";
+		String [] splittedname = name.split(" ");
+		System.out.println(splittedname[0]);
+		String [] splittedname1 = name.split("evry");
+		System.out.println(splittedname1[1].trim());
 		
+		for (int i=0; i<name.length(); i++) {
+			char let1 = name.charAt(i);
+			System.out.println(let1);
+		}
+		//To reverse 
+		for (int i=name.length()-1; i>=0; i--) {
+			char let1 = name.charAt(i);
+			System.out.println(let1);
+		}
 		
 	}
 
