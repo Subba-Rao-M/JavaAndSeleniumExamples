@@ -36,7 +36,7 @@ public class HandleBrowserWindowsDemo {
 		
 		System.out.println("Child Window : "+driver.getTitle());
 		
-		//Swithc to Parent to window again
+		//Switch to Parent to window again
 		driver.switchTo().window(parentid);
 		
 		System.out.println("Again Parent window : "+driver.getTitle());

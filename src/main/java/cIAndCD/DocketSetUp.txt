@@ -1,6 +1,6 @@
 Docker:
 Docker follows containerization
-Physical machines - > Virtual machines usng vmwares Virtualization - > 
+Physical machines - > Virtual machines using vmwares Virtualization - > 
 Containerization 
 
 https://hub.docker.com/ -- official website

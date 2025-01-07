@@ -12,8 +12,8 @@ public class StringVsStringBufferVsStringBuilder {
 		s1.append(" To Java");
 		System.out.println(s1); //Mutable
 		
-		StringBuilder s2 = new StringBuilder("Welcome");
-		s2.append("To Java");
+		StringBuilder s2 = new StringBuilder("Welcome ");
+		s2.append("To Java 1.8");
 		System.out.println(s2); //Mutable
 	}
 
