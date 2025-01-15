@@ -22,6 +22,7 @@ public class TC_04_WindowActivities_Demo {
 		driver.navigate().back();
 
 		driver.navigate().forward();
+		driver.quit();
 		System.out.println("End of test");
 
 	}
