@@ -1,12 +1,30 @@
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\testCases\TC_LoginTest.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\pageObjects\BasePage.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\pageObjects\HomePage.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\testCases\TC_LoginDDTTest.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\pageObjects\AccountRegistrationPage.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\utilities\ExtentReportManager.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\pageObjects\MyAccountPage.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\testCases\TC_AccountRegistrationTest.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\utilities\DataProviders.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\testBase\BaseClass.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\utilities\ExcelUtility.java
-C:\Users\raooosub\OneDrive - Tietoevry\Subba Rao\D\MyAutomationLearning\JavaAndSeleniumExamples\src\test\java\pageObjects\LoginPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\pageObjects\AccountRegistrationPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\pageObjects\BasePage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\pageObjects\HomePage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\pageObjects\LoginPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\pageObjects\MyAccountPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_AbstractComponents\AbstractComponent.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_JsonTestData\DataReader.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_PageObjects\CartPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_PageObjects\CheckOutPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_PageObjects\ConfirmationPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_PageObjects\LandingPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_PageObjects\OrderPage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_PageObjects\ProductCataloguePage.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_Resources\ExtentReporterNG.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_StandAloneTest\TC_01_TestSubmitOrder.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_StandAloneTest\TC_02_TestSubmitOrderUpdated.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_StandAloneTest\TC_03_TestErrorValidations.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_StandAloneTest\TC_04_TestSubmitOrderWithHashMapData.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_StandAloneTest\TC_05_TestSubmitOrderWithJSONData.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_StandAloneTest\TC_StandAloneTest.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_TestComponents\BaseTest.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_TestComponents\Listeners.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\rs_TestComponents\Retry.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\testBase\BaseClass.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\testCases\TC_AccountRegistrationTest.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\testCases\TC_LoginDDTTest.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\testCases\TC_LoginTest.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\utilities\DataProviders.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\utilities\ExcelUtility.java
+C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\src\test\java\utilities\ExtentReportManager.java

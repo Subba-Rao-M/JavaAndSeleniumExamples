@@ -37,3 +37,17 @@ Place cd project path
 mvn test and save the file
 click on run.bat file to execute the scripts
 
+
+
+RS course:
+
+Add profiles with maven sure plugin for each xml so that using particular name given the xml will be triggered using command prompt
+P stands for profile
+mvn test -PRegression
+mvn test -PSmoke
+
+D refers to browser parameter
+mvn test -Dbrowser=firefox
+use system.getproperty("browser")
+
+

@@ -138,4 +138,16 @@ public class ExtentReportManager implements ITestListener {
 		 
 	}
 
+	
+	public void onTestStart(ITestResult result) {
+		System.out.println(" onTestStart");
+		
+	}
+
+	
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		System.out.println(" onTestFailedButWithinSuccessPercentage");
+		
+	}
+
 }

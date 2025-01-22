@@ -12,15 +12,15 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReportManager implements ITestListener{
 	
-	public ExtentSparkReporter sparkReporter; //UI of Report
+	public ExtentSparkReporter sparkReporter; //UI of Report is supported by this class
 	public ExtentReports extent; //Populating common information in report
 	public ExtentTest test; //Creating test case entries in report and updating test status for method 
 
 	
 	public void onStart(ITestContext context) {
 		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir")+"/reports/myReport.html"); //specify location of report
-		sparkReporter.config().setDocumentTitle("Automation Report"); //Report title
-		sparkReporter.config().setReportName("Functional Testing"); //name of the report
+		sparkReporter.config().setDocumentTitle("Automation Report"); //Report title at browser tab
+		sparkReporter.config().setReportName("Functional Testing"); //name of the report in report header section
 		sparkReporter.config().setTheme(Theme.DARK);
 		
 		extent = new ExtentReports();
@@ -57,4 +57,18 @@ public class ExtentReportManager implements ITestListener{
 	 public void onFinish(ITestContext context) {
 		 extent.flush(); //Publish the report with updates
 		  }
+
+
+
+
+	public void onTestStart(ITestResult result) {
+		System.out.println("On test start");
+		
+	}
+
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		// TODO Auto-generated method stub
+		
+	}
 }

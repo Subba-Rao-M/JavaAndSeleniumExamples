@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_LoginDDTTest">
+      <class name="rs_StandAloneTest.TC_03_TestErrorValidations">
         <methods>
-          <include name="setUp"/>
+          <include name="testInValidLoginForErrorMessage"/>
           <include name="tearDown"/>
-          <include name="verify_login"/>
+          <include name="launchApplication"/>
         </methods>
-      </class> <!-- testCases.TC_LoginDDTTest -->
+      </class> <!-- rs_StandAloneTest.TC_03_TestErrorValidations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

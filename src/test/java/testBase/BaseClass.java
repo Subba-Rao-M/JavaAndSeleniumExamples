@@ -25,6 +25,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 	public static WebDriver driver;
 	public Logger logger;
@@ -78,8 +80,10 @@ public class BaseClass {
 		else if(prop.getProperty("execution_env").equalsIgnoreCase("local")) {
 			logger.info("Local environment execution");
 			switch(browser.toLowerCase()) {
-			case "edge" : 	driver = new EdgeDriver(); break;
-			case "chrome" :  ChromeOptions capbs = new ChromeOptions();
+			case "edge" : 	
+							driver = new EdgeDriver(); break;
+			case "chrome" : 
+							ChromeOptions capbs = new ChromeOptions();
 	        				capbs.addArguments("--remote-allow-origins=*");
 	        				capbs.setAcceptInsecureCerts(true);
 	        				driver = new ChromeDriver(capbs);

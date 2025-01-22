@@ -14,10 +14,26 @@ Jenkins will by default follow headless mode of testing
 
 Remote repository : https://github.com/Subba-Rao-M/JavaAndSeleniumExamples.git
 
-Install the jenkins: or run war file java -jar jenkins.war
+Install the jenkins: or run war file java -jar jenkins.war 
+if port number needs to be changes java -jar jenkins.war -httpPort=9090
 
 Go to manage jenkins: install required plugins
 configure maven, jdk and git paths in jenkins
 
 Manage Jenkins - Tools - Add JDK, Git and maven paths from system and save it
 
+
+For local select custom work sapce and give project file path for POM related folder
+select invoke top level maven targents in build
+give test -Pmaster -Dbrowser=edge 
+
+Add the choice parameter values for -P and -D values to get values dynamically
+
+Create different values for headless and headed browser values like chrome and chrome headless
+
+Scheduling Jenkins Job:
+Use build periodically
+MIns Hr(1 to 24) Day of month month(0 to 12) dayofweek(0 to 7)
+45 7 *** i.e run at 7.45
+* 5 *** starts at 5AM
+3rd parameter refers to day

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+  <test thread-count="5" name="Test SuccessFul Transactions">
+    <classes>
+      <class name="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated"/>
+  </classes>
+ </test>
+   
+      <test thread-count="5" name="Test Error Validations">
+    <classes>
+      <class name="rs_StandAloneTest.TC_03_TestErrorValidations"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

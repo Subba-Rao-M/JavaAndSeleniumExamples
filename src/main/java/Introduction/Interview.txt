@@ -1,0 +1,45 @@
+1. What is the design pattern used in project
+	Page object model and also page factory pattern is used to create locators object
+	using webelement and list of webelements
+	objects are handled from action methods using page object chaining
+2. How are reusable utilities handled
+	Abstract component class is created to handle re-usable common methods and inherit it in all page classes
+	All test related common methods are created under base test class
+
+3. Using inheritance in framework
+	Re-usability classed extended to page objects and test cases as above
+
+4. Using interfaces in framework
+	Listeners class with implement keyword like testnglistners helps in taking screenshot, retry
+	webdriver and take screenshot are interfaces
+
+5. Encapusaltion - Hiding implementatkion details and binding variables and methods inside class
+
+6. Framework supports parallel run in testng.xml parallel is set to tests so that 2 test case files running in parallel
+	Thread safety is achieved using threadlocal class which avoids concurrency issue and also in report get correct status
+
+7. Static keywords - if driver object is static then parallel testing cannot be achieved. If variable is static then the variable is shared across all threads.
+	In case of parallel testing variables dont make it static like for drivers, 
+	use it for properties file while reading the data, for modifications dont use it
+
+8. Global parameters to test during run time like browser, environment type, the name of suite to run
+
+9.Only running selected test cases - using include and exclude option in testng groups option
+
+10. Handling flacky test cases - Iretry analyzer interface is used
+
+11. taking screenshot - using testng listener and using on test fail we will call take screenshot code
+
+12. Framework architecture
+
+ Abstract Classes								BASE tEST
+ 
+  |
+  | Inheritance 
+page Objects  <--------------------------------  Test Cases    -- Test Data using json parser 
+													Listeners for takescreenshot, retry, report
+													test runners
+													pom.xml
+													jenkins
+							 
+

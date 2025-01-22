@@ -31,4 +31,10 @@ public class MyListner implements ITestListener{
 		 System.out.println("onFinish Test Case File execution Finished --->");
 		  }
 
+
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		 System.out.println("onTestFailedButWithinSuccessPercentage Test Case File execution Finished --->");
+		
+	}
+
 }

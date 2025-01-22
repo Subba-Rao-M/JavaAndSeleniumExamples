@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count="5" name="Suite">
+
+<groups>
+<run>
+<include name="Purchase"></include>
+</run>
+</groups>
+  <test thread-count="5" name="Test SuccessFul Transactions">
+    <classes>
+      <class name="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated"/>
+      <class name="rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData"></class>
+      <class name="rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData"></class>
+  </classes>
+ 
+
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

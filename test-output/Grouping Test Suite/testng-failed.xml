@@ -23,6 +23,20 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- testCases.TC_AccountRegistrationTest -->
+      <class name="testCases.TC_LoginDDTTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verify_login"/>
+        </methods>
+      </class> <!-- testCases.TC_LoginDDTTest -->
+      <class name="testCases.TC_LoginTest">
+        <methods>
+          <include name="verify_login"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.TC_LoginTest -->
     </classes>
   </test> <!-- Test with Groups(failed) -->
 </suite> <!-- Failed suite [Grouping Test Suite] -->
