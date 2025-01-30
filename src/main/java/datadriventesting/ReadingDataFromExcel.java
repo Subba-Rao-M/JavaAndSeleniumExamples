@@ -21,7 +21,7 @@ public class ReadingDataFromExcel {
 		XSSFWorkbook workbook = new XSSFWorkbook(file);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
 		//XSSFSheet sheet1 = workbook.getSheetAt(0); // TO get sheet based on the index in order
-		
+		//workbook.getNumberOfSheets() - if more than one sheet to retrieve sheet based on index or using sheet name using for loop and for received sheet name perform action
 		//Now count the number of rows and cell in a sheet like 2 dimentional array
 		
 		int totalrows = sheet.getLastRowNum(); // To get the last row in a sheet i.e no of rows in sheet

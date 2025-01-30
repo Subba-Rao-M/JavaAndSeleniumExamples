@@ -181,3 +181,42 @@ mvn test and save the file
 click on run.bat file to execute the scripts
 
 Push the code to git and git hub
+
+
+BDD development using Cucumber and framework:
+
+Gherkin - business readable domain specific language
+keywords - scenario, feature, feature file, scenairo outline, step definition
+Sceanrio - > Test cases written in Given when then format
+
+Template:
+Feature: Login
+Scenario: Verify valid login
+Given user is in login page
+when user enters login credentials and clicks on login
+then home page should be displayed
+
+and for positive additional scenario
+but for negative additional condition ex: but error message is not displayed
+
+Feature - business requirement containing multiple scenarios grouped based on business functionality
+
+Feature file can be created with .feature extention
+
+Scenario outline - Data is taken from table using keywords for variable and supports paramterization 
+table is written with example and column headers
+
+in step definition for parameter (.+) reference for anything coming from scenario outline data
+and start the statement with  ^ and end with $ for regulat expressions
+example:
+@Given("^Logged in with username (.+) and password (.+)$")
+Parameters are passed in sequence
+check previous step when using step definition for and line, and also can be used
+for parameter form scenario use {string} for catching it in step
+
+tidy gerkin chrome plugin and copy and paste feature file steps generated
+AbstractTestngcucumber test class provides wrapper to run testng tests with asserts
+Cucumber inbuilt used junit
+
+
+

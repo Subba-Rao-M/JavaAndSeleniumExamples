@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\rs_testng_ErrorValidation.xml</span>
+                    <span>C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\rs_testSuites\Purchase.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,  1 skipped,  </span>
+                    <span class="method-stats">10 methods, 2 failed,  2 skipped,  6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,18 +104,18 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_03_TestErrorValidations" hash-for-method="testInValidLoginForErrorMessage">testInValidLoginForErrorMessage</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData" hash-for-method="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_03_TestErrorValidations" hash-for-method="testSubmitOrderWithInvalidProduct">testSubmitOrderWithInvalidProduct</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData" hash-for-method="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="method-list-title skipped">Skipped methods</span>
                     <span class="show-or-hide-methods skipped">
                       <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
                       <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
@@ -123,10 +123,54 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_03_TestErrorValidations" hash-for-method="testSubmitOrderWithInvalidProduct">testSubmitOrderWithInvalidProduct</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData" hash-for-method="OrderHistoryTest">OrderHistoryTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData" hash-for-method="OrderHistoryTest">OrderHistoryTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated" hash-for-method="OrderHistoryTest(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)">OrderHistoryTest(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated" hash-for-method="OrderHistoryTest(subbaraw@gmail.com, Span@1234, QWERTY)">OrderHistoryTest(subbaraw@gmail.com, Span@1234, QWERTY)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData" hash-for-method="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated" hash-for-method="testSubmitOrder(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)">testSubmitOrder(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated" hash-for-method="testSubmitOrder(subbaraw@gmail.com, Span@1234, QWERTY)">testSubmitOrder(subbaraw@gmail.com, Span@1234, QWERTY)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData" hash-for-method="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -141,61 +185,49 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">rs_StandAloneTest.TC_03_TestErrorValidations</span>
+              <span class="class-name">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testInValidLoginForErrorMessage">
-                  </a> <!-- testInValidLoginForErrorMessage -->
-                  <span class="method-name">testInValidLoginForErrorMessage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class*=&apos;flyInOut&apos;]&quot;}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+                  <a name="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})">
+                  </a> <!-- testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO}) -->
+                  <span class="method-name">testSubmitOrder</span>
+                  <span class="parameters">({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_292&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2bf93e7255549b5b00b3dc736a74136d, findElement {using=css selector, value=[class*=&apos;flyInOut&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\raooosub\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57698}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57698/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2bf93e7255549b5b00b3dc736a74136d
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy29.getText(Unknown Source)
-	at rs_PageObjects.LandingPage.getLoginErrorMessage(LandingPage.java:45)
-	at rs_StandAloneTest.TC_03_TestErrorValidations.testInValidLoginForErrorMessage(TC_03_TestErrorValidations.java:25)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\raooosub\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63607}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63607/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6d512f8fc4fcad99bd85568b3055a96
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at rs_AbstractComponents.AbstractComponent.waitForElementToAppear(AbstractComponent.java:31)
+	at rs_PageObjects.ProductCataloguePage.getProductList(ProductCataloguePage.java:36)
+	at rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData.testSubmitOrder(TC_04_TestSubmitOrderWithHashMapData.java:28)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 22 stack frames
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSubmitOrderWithInvalidProduct">
-                  </a> <!-- testSubmitOrderWithInvalidProduct -->
-                  <span class="method-name">testSubmitOrderWithInvalidProduct</span>
+                  <a name="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})">
+                  </a> <!-- testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO}) -->
+                  <span class="method-name">testSubmitOrder</span>
+                  <span class="parameters">({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at rs_StandAloneTest.TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct(TC_03_TestErrorValidations.java:37)
+	at rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData.testSubmitOrder(TC_05_TestSubmitOrderWithJSONData.java:38)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 22 stack frames
+... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -204,55 +236,140 @@ Session ID: 2bf93e7255549b5b00b3dc736a74136d
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">rs_StandAloneTest.TC_03_TestErrorValidations</span>
+              <span class="class-name">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSubmitOrderWithInvalidProduct">
-                  </a> <!-- testSubmitOrderWithInvalidProduct -->
-                  <span class="method-name">testSubmitOrderWithInvalidProduct</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at rs_StandAloneTest.TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct(TC_03_TestErrorValidations.java:37)
+                  <a name="OrderHistoryTest">
+                  </a> <!-- OrderHistoryTest -->
+                  <span class="method-name">OrderHistoryTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TC_04_TestSubmitOrderWithHashMapData.OrderHistoryTest(java.util.HashMap)[pri:0, instance:rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData@37374a5e] depends on not successfully finished methods
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
 ... Removed 22 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="OrderHistoryTest">
+                  </a> <!-- OrderHistoryTest -->
+                  <span class="method-name">OrderHistoryTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TC_05_TestSubmitOrderWithJSONData.OrderHistoryTest(java.util.HashMap)[pri:0, instance:rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData@4671e53b] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})">
+                  </a> <!-- testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY}) -->
+                  <span class="method-name">testSubmitOrder</span>
+                  <span class="parameters">({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})">
+                  </a> <!-- testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY}) -->
+                  <span class="method-name">testSubmitOrder</span>
+                  <span class="parameters">({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="OrderHistoryTest(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)">
+                  </a> <!-- OrderHistoryTest(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO) -->
+                  <span class="method-name">OrderHistoryTest</span>
+                  <span class="parameters">(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OrderHistoryTest(subbaraw@gmail.com, Span@1234, QWERTY)">
+                  </a> <!-- OrderHistoryTest(subbaraw@gmail.com, Span@1234, QWERTY) -->
+                  <span class="method-name">OrderHistoryTest</span>
+                  <span class="parameters">(subbaraw@gmail.com, Span@1234, QWERTY)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSubmitOrder(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)">
+                  </a> <!-- testSubmitOrder(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO) -->
+                  <span class="method-name">testSubmitOrder</span>
+                  <span class="parameters">(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSubmitOrder(subbaraw@gmail.com, Span@1234, QWERTY)">
+                  </a> <!-- testSubmitOrder(subbaraw@gmail.com, Span@1234, QWERTY) -->
+                  <span class="method-name">testSubmitOrder</span>
+                  <span class="parameters">(subbaraw@gmail.com, Span@1234, QWERTY)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\rs_testng_ErrorValidation.xml</span>
+            <span class="header-content">C:\Learning Materials\MyAutomationLearning\JavaAndSeleniumExamples\JavaAndSeleniumExamples\rs_testSuites\Purchase.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;ErrorHandling&quot;/&gt;
+      &lt;include name=&quot;Purchase&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
   &lt;groups&gt;
     &lt;run&gt;
-      &lt;include name=&quot;ErrorHandling&quot;/&gt;
+      &lt;include name=&quot;Purchase&quot;/&gt;
     &lt;/run&gt;
   &lt;/groups&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;rs_TestComponents.Listeners&quot;/&gt;
-  &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test Error Validations&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test SuccessFul Transactions&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;rs_StandAloneTest.TC_03_TestErrorValidations&quot;/&gt;
+      &lt;class name=&quot;rs_StandAloneTest.TC_02_TestSubmitOrderUpdated&quot;/&gt;
+      &lt;class name=&quot;rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData&quot;/&gt;
+      &lt;class name=&quot;rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test Error Validations --&gt;
+  &lt;/test&gt; &lt;!-- Test SuccessFul Transactions --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -264,7 +381,7 @@ Session ID: 2bf93e7255549b5b00b3dc736a74136d
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test Error Validations (1 class)</span>
+                <span class="test-name">Test SuccessFul Transactions (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -275,14 +392,14 @@ Session ID: 2bf93e7255549b5b00b3dc736a74136d
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">ErrorHandling</span>
+              <span class="test-group-name">Purchase</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">testInValidLoginForErrorMessage</span>
+                <span class="method-in-group-name">OrderHistoryTest</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">testSubmitOrderWithInvalidProduct</span>
+                <span class="method-in-group-name">testSubmitOrder</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -302,19 +419,47 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testInValidLoginForErrorMessage')
-data.setCell(0, 2, 'rs_StandAloneTest.TC_03_TestErrorValidations')
-data.setCell(0, 3, 22348);
+data.setCell(0, 1, 'testSubmitOrder')
+data.setCell(0, 2, 'rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData')
+data.setCell(0, 3, 33770);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testSubmitOrderWithInvalidProduct')
-data.setCell(1, 2, 'rs_StandAloneTest.TC_03_TestErrorValidations')
-data.setCell(1, 3, 19880);
+data.setCell(1, 1, 'testSubmitOrder')
+data.setCell(1, 2, 'rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData')
+data.setCell(1, 3, 29666);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSubmitOrderWithInvalidProduct')
-data.setCell(2, 2, 'rs_StandAloneTest.TC_03_TestErrorValidations')
-data.setCell(2, 3, 14103);
+data.setCell(2, 1, 'testSubmitOrder')
+data.setCell(2, 2, 'rs_StandAloneTest.TC_02_TestSubmitOrderUpdated')
+data.setCell(2, 3, 29570);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSubmitOrder')
+data.setCell(3, 2, 'rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData')
+data.setCell(3, 3, 25928);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testSubmitOrder')
+data.setCell(4, 2, 'rs_StandAloneTest.TC_02_TestSubmitOrderUpdated')
+data.setCell(4, 3, 21171);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testSubmitOrder')
+data.setCell(5, 2, 'rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData')
+data.setCell(5, 3, 10283);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'OrderHistoryTest')
+data.setCell(6, 2, 'rs_StandAloneTest.TC_02_TestSubmitOrderUpdated')
+data.setCell(6, 3, 4126);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'OrderHistoryTest')
+data.setCell(7, 2, 'rs_StandAloneTest.TC_02_TestSubmitOrderUpdated')
+data.setCell(7, 3, 776);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'OrderHistoryTest')
+data.setCell(8, 2, 'rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData')
+data.setCell(8, 3, 0);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'OrderHistoryTest')
+data.setCell(9, 2, 'rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData')
+data.setCell(9, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -345,47 +490,121 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">rs_StandAloneTest.TC_03_TestErrorValidations</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testInValidLoginForErrorMessage</span>
-                <span class="method-start">15278 ms</span>
+                <span class="method-name">testSubmitOrder(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)</span>
+                <span class="method-start">110025 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">38042 ms</span>
+                <span class="method-start">131198 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">38719 ms</span>
+                <span class="method-start">131865 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testSubmitOrderWithInvalidProduct</span>
-                <span class="method-start">75653 ms</span>
+                <span class="method-name">testSubmitOrder(subbaraw@gmail.com, Span@1234, QWERTY)</span>
+                <span class="method-start">134525 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">89758 ms</span>
+                <span class="method-start">164095 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">90532 ms</span>
+                <span class="method-start">164782 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">OrderHistoryTest(subbaraw@gmail.com, Span@1234, IPHONE 13 PRO)</span>
+                <span class="method-start">222358 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">223134 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">223820 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">OrderHistoryTest(subbaraw@gmail.com, Span@1234, QWERTY)</span>
+                <span class="method-start">245731 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">249857 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">250537 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testSubmitOrderWithInvalidProduct</span>
-                <span class="method-start">101644 ms</span>
+                <span class="method-name">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})</span>
+                <span class="method-start">292606 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">121731 ms</span>
+                <span class="method-start">302892 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">303595 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})</span>
+                <span class="method-start">397963 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">423891 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">OrderHistoryTest</span>
+                <span class="method-start">424596 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">424895 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO})</span>
+                <span class="method-start">454908 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">484574 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">485258 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSubmitOrder({password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY})</span>
+                <span class="method-start">491772 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">525542 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">OrderHistoryTest</span>
+                <span class="method-start">526236 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

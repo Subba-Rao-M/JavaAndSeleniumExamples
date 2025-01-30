@@ -109,5 +109,7 @@ All codes will be maintained in developers own branch both in local and remote
 then code will be merged to main/master branch
 
 
+GitHubwebhook triggers jenkins job auotomaticall when someone pushes to github
+
 
 

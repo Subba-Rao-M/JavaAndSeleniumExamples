@@ -25,6 +25,8 @@ import java.util.Scanner;
  * Syso("Comment here")}
  * Finally block will execute if exception occurred and handled or exception occurred and it is not handled or exception not occurred
  * finally should be written after catch blocks and should not be added in between
+ * finally will work with try only
+ * immediately after try catch should be written and there should not be any other code
  * 
  * 
  * Checked Exception:
@@ -53,7 +55,7 @@ public class ExceptionHandingDemo {
 		}
 		finally{
 			sc.close();
-			System.out.println("FInal code block");
+			System.out.println("Final code block");
 		}
 		System.out.println("Program Ended");
 		System.out.println("Program Exited");

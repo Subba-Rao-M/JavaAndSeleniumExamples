@@ -11,6 +11,9 @@ public class CollectionsDemo {
 	 * Above holds group of objects not primitive data
 	 * To store primitive data we have to use wrapper classes
 	 * collections is interface available in java.util
+	 * List collection is implemented by arraylist, linkedlist and vector
+	 * Set is implemented by hashset, linkedhashset and treeset
+	 * Map is implemeted by HashMap, LinkedHashMap and TreeMap
 	 * 
 	 * Array List: 
 	 * 

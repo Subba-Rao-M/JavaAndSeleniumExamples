@@ -232,11 +232,52 @@ Method Overriding:
 	}
 
 
+What is Static Binding and Dynamic Binding?
+Static or early binding is resolved at compile time. Method overloading is an example of static binding.
+
+Dynamic or late or virtual binding is resolved at run time. Method overriding is an example of dynamic binding.
+
+What is the difference between Abstraction and Encapsulation?
+“Program to interfaces, not implementations” is the principle for Abstraction and 
+“Encapsulate what varies” is the OO principle for Encapsulation.
+
+Abstraction provides a general structure of a class and leaves the details for the implementers. 
+Encapsulation is to create and define the permissions and restrictions of an object and its member variables and methods.
+
+Abstraction is implemented in Java using interface and abstract class 
+while Encapsulation is implemented using four types of access level modifiers: public, protected, no modifier and private.
+
+Can you use abstract and final both with a method?
+No, because abstract method needs to be overridden whereas you can't override final method.
+
+Is it possible to instantiate the abstract class?
+No, abstract class can never be instantiated.
+
+Can you declare an interface method static?
+No, because methods of an interface is abstract by default, and static and abstract keywords can't be used together.
+
+Can an Interface be final?
+No, because its implementation is provided by another class.
+
+What is difference between abstract class and interface?
+Abstract class	Interface
+1)An abstract class can have method body (non-abstract methods).	Interface have only abstract methods.
+2)An abstract class can have instance variables.	An interface cannot have instance variables.
+3)An abstract class can have constructor.	Interface cannot have constructor.
+4)An abstract class can have static methods.	Interface cannot have static methods.
+5)You can extends one abstract class.	You can implement multiple interfaces.
+
+
+Can we define private and protected modifiers for variables in interfaces?
+No, they are implicitly public.
+
+
+When can an object reference be cast to an interface reference?
+An object reference can be cast to an interface reference when the object implements the referenced interface.
 
 
 
-
-
-
-
-	
+What is Runtime Polymorphism?
+Runtime polymorphism or dynamic method dispatch is a process in which a call to an overridden method 
+is resolved at runtime rather than at compile-time.
+In this process, an overridden method is called through the reference variable of a super class. The 

@@ -9,56 +9,38 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test Error Validations</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num attn">2</td><td class="num">123,994</td><td>ErrorHandling</td><td></td></tr>
+<tr><td><a href="#t0">Test SuccessFul Transactions</a></td><td class="num">6</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">2</td><td class="num">526,270</td><td>Purchase</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test Error Validations &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">rs_StandAloneTest.TC_03_TestErrorValidations</td><td><a href="#m0">testInValidLoginForErrorMessage</a></td><td rowspan="1">1737539311513</td><td rowspan="1">22348</td></tr><tr class="failedeven"><td><a href="#m1">testSubmitOrderWithInvalidProduct</a></td><td rowspan="1">1737539397879</td><td rowspan="1">19880</td></tr><tr><th colspan="4">Test Error Validations &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">rs_StandAloneTest.TC_03_TestErrorValidations</td><td><a href="#m2">testSubmitOrderWithInvalidProduct</a></td><td rowspan="1">1737539371888</td><td rowspan="1">14103</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test SuccessFul Transactions &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</td><td><a href="#m0">testSubmitOrder</a></td><td rowspan="1">1738238106688</td><td rowspan="1">10283</td></tr><tr class="failedodd"><td rowspan="1">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</td><td><a href="#m1">testSubmitOrder</a></td><td rowspan="1">1738238268990</td><td rowspan="1">29666</td></tr><tr><th colspan="4">Test SuccessFul Transactions &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</td><td><a href="#m2">OrderHistoryTest</a></td><td rowspan="1">1738238238678</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</td><td><a href="#m3">OrderHistoryTest</a></td><td rowspan="1">1738238340318</td><td rowspan="1">0</td></tr><tr><th colspan="4">Test SuccessFul Transactions &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated</td><td><a href="#m4">OrderHistoryTest</a></td><td rowspan="2">1738238036440</td><td rowspan="2">776</td></tr><tr class="passedeven"><td><a href="#m5">OrderHistoryTest</a></td></tr><tr class="passedeven"><td><a href="#m6">testSubmitOrder</a></td><td rowspan="2">1738237924107</td><td rowspan="2">21171</td></tr><tr class="passedeven"><td><a href="#m7">testSubmitOrder</a></td></tr><tr class="passedodd"><td rowspan="1">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData</td><td><a href="#m8">testSubmitOrder</a></td><td rowspan="1">1738238212045</td><td rowspan="1">25928</td></tr><tr class="passedeven"><td rowspan="1">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData</td><td><a href="#m9">testSubmitOrder</a></td><td rowspan="1">1738238305854</td><td rowspan="1">33770</td></tr></tbody>
 </table>
-<h2>Test Error Validations</h2><h3 id="m0">rs_StandAloneTest.TC_03_TestErrorValidations#testInValidLoginForErrorMessage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class*=&apos;flyInOut&apos;]&quot;}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<h2>Test SuccessFul Transactions</h2><h3 id="m0">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData#testSubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.12.1&apos;, revision: &apos;8e34639b11&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_292&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2bf93e7255549b5b00b3dc736a74136d, findElement {using=css selector, value=[class*=&apos;flyInOut&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\raooosub\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57698}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57698/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2bf93e7255549b5b00b3dc736a74136d
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy29.getText(Unknown Source)
-	at rs_PageObjects.LandingPage.getLoginErrorMessage(LandingPage.java:45)
-	at rs_StandAloneTest.TC_03_TestErrorValidations.testInValidLoginForErrorMessage(TC_03_TestErrorValidations.java:25)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\raooosub\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63607}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63607/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6d512f8fc4fcad99bd85568b3055a96
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at rs_AbstractComponents.AbstractComponent.waitForElementToAppear(AbstractComponent.java:31)
+	at rs_PageObjects.ProductCataloguePage.getProductList(ProductCataloguePage.java:36)
+	at rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData.testSubmitOrder(TC_04_TestSubmitOrderWithHashMapData.java:28)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">rs_StandAloneTest.TC_03_TestErrorValidations#testSubmitOrderWithInvalidProduct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at rs_StandAloneTest.TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct(TC_03_TestErrorValidations.java:37)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData#testSubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Span@1234, email=subbaraw@gmail.com, productName=IPHONE 13 PRO}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData.testSubmitOrder(TC_05_TestSubmitOrderWithJSONData.java:38)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">rs_StandAloneTest.TC_03_TestErrorValidations#testSubmitOrderWithInvalidProduct</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at rs_StandAloneTest.TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct(TC_03_TestErrorValidations.java:37)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData#OrderHistoryTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TC_04_TestSubmitOrderWithHashMapData.OrderHistoryTest(java.util.HashMap)[pri:0, instance:rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData@37374a5e] depends on not successfully finished methods
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData#OrderHistoryTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TC_05_TestSubmitOrderWithJSONData.OrderHistoryTest(java.util.HashMap)[pri:0, instance:rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData@4671e53b] depends on not successfully finished methods
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated#OrderHistoryTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>subbaraw@gmail.com</td><td>Span@1234</td><td>IPHONE 13 PRO</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated#OrderHistoryTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>subbaraw@gmail.com</td><td>Span@1234</td><td>QWERTY</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated#testSubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>subbaraw@gmail.com</td><td>Span@1234</td><td>IPHONE 13 PRO</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">rs_StandAloneTest.TC_02_TestSubmitOrderUpdated#testSubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>subbaraw@gmail.com</td><td>Span@1234</td><td>QWERTY</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData#testSubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData#testSubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=Span@1234, email=subbaraw@gmail.com, productName=QWERTY}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

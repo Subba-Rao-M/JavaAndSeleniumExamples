@@ -1,5 +1,7 @@
 Selenium Grid:
 
+smart proxy server which helps in running tests parallel and faster
+
 Grid has 2 components: Hub and Node
 
 Hub - > Client machine with controller from where execution starts
@@ -32,7 +34,7 @@ Distributes system using multiple machines(i.e if multiple VMS or machines avail
 	java -jar selenium-server-4.15.0.jar hub
 3) Run below command to make one machine as node and to attach it to hub machine
 	java -jar selenium-server-4.15.0.jar node --hub http://<hub-ip>:4444/
-4) URL to see session http://localhost:4444/
+4) URL to see session or check the status http://localhost:4444/
 
 
 

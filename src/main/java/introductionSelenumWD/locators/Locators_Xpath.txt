@@ -96,7 +96,7 @@ it is a combination of relative and absolute xpath
 where id is parent of a and a is parent of img tag
 
 Difference B/n Xpath and CSS:
-In DOM structure CSS will go throgh top down approach in one direct
+In DOM structure CSS will go through top down approach in one direct
 Xpath is multiple directional to identify element in DOM
 
 

@@ -24,18 +24,7 @@ public class LocatorsDemo {
 		System.out.println(status);
 		
 		//driver.findElement(By.id("logo")).isDisplayed();
-		
-		/** LinkTexts and Partial Link Texts
-		 * Applicable only for links
-		 * in html it is represented by a tag and href attribute
-		 * href refers to target link
-		 * linktext is different from innertext has different tag
-		 * linktext is not an attribute of an element
-		 * linktext will perform click action on an element
-		 * Partiallink text may return multiple elements and return may not be unique
-		 * Prefer partial link text if it returns single value only or else use linktext
-		 */
-		
+			
 		driver.findElement(By.linkText("Tablets")).click();
 		
 		driver.findElement(By.partialLinkText("Desk")).click();

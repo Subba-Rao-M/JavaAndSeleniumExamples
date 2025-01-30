@@ -11,8 +11,9 @@ public class TestJDBCconcepts {
 	public static void main(String[] args) throws SQLException {
 
 		// Create COnnection
-
-		Connection con = DriverManager.getConnection("ENter JDBC URL with user name and apssword", "hr", "hr");
+		//check if any jars needs to be configured for jdbc connection based on database
+		//"jdbc:mySQL://"+host+":"+port+"/databasename";
+		Connection con = DriverManager.getConnection("ENter JDBC URL with user name and apssword", "username", "password");
 
 		// Create statement / write query
 
@@ -32,6 +33,7 @@ public class TestJDBCconcepts {
 			int empid = res.getInt("Employee_ID"); // where EMPloyee_ID is column in table
 			String fname = res.getString("Frist_Name");
 			System.out.println(" DB Values pring" + empid + " " + fname);
+			//Pass the above values received in selenium script
 		}
 
 		// Close the coneection

@@ -6,7 +6,7 @@ package oopsConcepts.inheritance;
 		System.out.println("M1 method");
 	}
 	
-	final void m2() {
+	final void m2() { //Cannot override this method
 		System.out.println("M2 method");
 	}
 }

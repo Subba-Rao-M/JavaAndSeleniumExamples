@@ -1,0 +1,19 @@
+Githumb webhook trigger job for jenkins:
+
+From repository level - go to settings - go to settings - click on webhooks
+
+Give payload url from jenkins  - Refer below url and paste it here and select push event radio button and save
+payload url is from where jenkins is listening - Go to Jenkins - Manage Jenkins - COnfigure gloabl settings and path
+ - Scroll down to github - click advanced - check for hook url
+ For each push and jenkins job should be triggered
+ IN jenkins build triggers, check the github hook trigger cehcbox for polling
+ 
+ To practice in local use ngrok application to make it public IP to provide communication between jenkins and github(DOnt use this for office network)
+Follow the installation procedure and once it it is installed
+Point the local ip to public ip
+localhost:9090 and ngrok provides 1 public ip address
+Jenkins can be accessed using internet using above step
+Update the public URL in github webhook url
+
+make some changes in local and push the code to github
+Jenkins should trigger the script

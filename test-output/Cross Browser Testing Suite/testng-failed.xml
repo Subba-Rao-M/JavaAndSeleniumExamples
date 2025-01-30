@@ -4,19 +4,6 @@
   <listeners>
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Chrome Browser Testing(failed)">
-    <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="testCases.TC_AccountRegistrationTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="verify_Account_Registration"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- testCases.TC_AccountRegistrationTest -->
-    </classes>
-  </test> <!-- Chrome Browser Testing(failed) -->
   <test thread-count="2" parallel="tests" name="Edge Browser Testing(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="edge"/>
@@ -30,9 +17,9 @@
       </class> <!-- testCases.TC_AccountRegistrationTest -->
     </classes>
   </test> <!-- Edge Browser Testing(failed) -->
-  <test thread-count="2" parallel="tests" name="Firefox Browser Testing(failed)">
+  <test thread-count="2" parallel="tests" name="Chrome Browser Testing(failed)">
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="testCases.TC_AccountRegistrationTest">
         <methods>
@@ -42,5 +29,5 @@
         </methods>
       </class> <!-- testCases.TC_AccountRegistrationTest -->
     </classes>
-  </test> <!-- Firefox Browser Testing(failed) -->
+  </test> <!-- Chrome Browser Testing(failed) -->
 </suite> <!-- Failed suite [Cross Browser Testing Suite] -->

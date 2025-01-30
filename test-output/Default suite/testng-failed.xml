@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="rs_StandAloneTest.TC_03_TestErrorValidations">
+      <class name="testngintegration.parameterization.DataProviderExcelDemo_3">
         <methods>
-          <include name="testInValidLoginForErrorMessage"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
+          <include name="testDataProvider"/>
         </methods>
-      </class> <!-- rs_StandAloneTest.TC_03_TestErrorValidations -->
+      </class> <!-- testngintegration.parameterization.DataProviderExcelDemo_3 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

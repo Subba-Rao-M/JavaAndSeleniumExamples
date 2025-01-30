@@ -1,8 +1,20 @@
 Maven is a build tool
 
+Why maven:
+1. Central repository to get dependencies
+2. maintaining common structure across organization
+3. Flexibility in integrating with CI tools
+4. Plugins for test framework
+
 pom.xml was used to add dependencies and plugins
 pom will have dependencies to include jar files required projects and
 plugin are used to compile and run our projects
+
+
+Artifact id: is a file/jar deployed into maven repository
+group id: to identidy project uniquely
+achetype: generate project based on defined structure
+Artifact id is sub project of group id
 
 to run project outside eclipse pom.xml should be used
 testng.xml cannot be run outside eclipse
@@ -12,6 +24,10 @@ testng.xml should be run through pom.xml
 plugins added in pom.xml
 1) maven compiler plugin - > to compile the project
 2) maven surefire plugin - > to run the project
+
+Maven surefire plugin
+
+
 
 plugins also like dependencies from apache and 
 
@@ -45,3 +61,15 @@ Add profiles with maven sure plugin for each xml so that using particular name g
 P stands for profile
 mvn test -PRegression
 mvn test -PSmoke
+
+D refers to browser parameter
+mvn test -Dbrowser=firefox
+use system.getproperty("browser")
+
+maven commands:
+
+clean - cleans the project by clearing all previous build execution details
+compile - all files are correct with programming syntax defined
+test - triggers test execution (also automatically performs clean and compile)
+first checks in local for existing jars and then connects to maven repository to get jars
+File name should end with word Test else maven test will not recognize the files

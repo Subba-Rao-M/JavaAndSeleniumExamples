@@ -32,7 +32,7 @@ class Dog extends Animal_SuperKeywordDemo_1{
 	
 	void eating() {
 		System.out.println(" Eating Bread");
-		super.eating();
+		super.eating(); //Calling method using super keyword
 	}
 	
 	

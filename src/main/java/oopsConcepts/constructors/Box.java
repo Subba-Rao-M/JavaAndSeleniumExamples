@@ -5,6 +5,7 @@ public class Box {
 	double width, height, depth;
 	
 	// Constructor Name should be same as class name
+	//If constructor block is not defined,complier will call default implicit constructor
 	
 	Box() { // Default constructor 
 		

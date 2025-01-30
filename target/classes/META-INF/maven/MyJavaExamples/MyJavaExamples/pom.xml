@@ -6,11 +6,11 @@
 	<artifactId>MyJavaExamples</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	 <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-   </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
 	<!--<build>
 		<plugins>
@@ -47,6 +47,20 @@
 			<version>4.12.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.5.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>7.5.0</version>
+		</dependency>
+
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
@@ -75,7 +89,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
-			
+
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
@@ -136,6 +150,14 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.13.3</version>
 		</dependency>
+		
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v115 -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-devtools-v115</artifactId>
+    <version>4.12.1</version>
+</dependency>
+
 
 	</dependencies>
 
@@ -153,7 +175,7 @@
 							<version>3.2.2</version>
 							<configuration>
 								<suiteXmlFiles>
-									<suiteXmlFile>rs_testng_ErrorValidation.xml</suiteXmlFile>
+									<suiteXmlFile>rs_testSuites/ErrorValidation.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -161,7 +183,7 @@
 				</pluginManagement>
 			</build>
 		</profile>
-<profile>
+		<profile>
 			<id>Purchase</id>
 			<build>
 				<pluginManagement><!-- lock down plugins versions to avoid using
@@ -174,7 +196,7 @@
 							<version>3.2.2</version>
 							<configuration>
 								<suiteXmlFiles>
-									<suiteXmlFile>rs_testng_Purchase.xml</suiteXmlFile>
+									<suiteXmlFile>rs_testSuites/Purchase.xml</suiteXmlFile>
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -182,27 +204,33 @@
 				</pluginManagement>
 			</build>
 		</profile>
-<profile>
-			<id>Master</id>
-			<build>
-				<pluginManagement><!-- lock down plugins versions to avoid using
-					Maven defaults (may be moved to parent pom) -->
-					<plugins>
-
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-surefire-plugin</artifactId>
-							<version>3.2.2</version>
-							<configuration>
-								<suiteXmlFiles>
-									<suiteXmlFile>master.xml</suiteXmlFile>
-								</suiteXmlFiles>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
+		
+		
+		  <profile>
+  <id>CucumberTests</id>
+  
+   
+  <build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M6</version>
+        <configuration>
+          <includes>
+            <include>**/TestNGTestRunner.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+      </plugins>
+       </pluginManagement>
+         </build>
+  
+  </profile>
+		
+		
 	</profiles>
 
 </project>

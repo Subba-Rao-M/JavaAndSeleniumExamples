@@ -56,6 +56,12 @@ public class ArrayListDemo {
 		//To access/extract specific element from arraylist using get method and index value
 		System.out.println("Extract element from list : " +mylist.get(3));
 		
+		//Contains test
+		System.out.println("Contains Test : "+mylist.contains("Welcome"));
+		
+		//indexof
+		System.out.println("Index of Test: "+mylist.indexOf("Welcome"));
+		
 		//Reading all the elements from arraylist
 		
 		//Approach 1 - using normal for loop

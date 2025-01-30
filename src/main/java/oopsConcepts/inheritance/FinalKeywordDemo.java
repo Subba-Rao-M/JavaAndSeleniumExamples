@@ -2,7 +2,7 @@ package oopsConcepts.inheritance;
 
 class Test{
 	int x=100;
-	final int y = 200;
+	final int y = 200; //Cannot change this value again
 }
 
 public class FinalKeywordDemo {

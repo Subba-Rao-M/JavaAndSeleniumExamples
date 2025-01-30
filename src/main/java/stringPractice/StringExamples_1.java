@@ -34,7 +34,7 @@ public class StringExamples_1 {
 		System.out.println(Arrays.toString(arr3));
 		
 		// *, (, ), %, ^ -- Cannnot be used as delimiter
-		// arr1[] + arr2[] is not possible if vaue contains multiple values
+		// arr1[] + arr2[] is not possible if value contains multiple values
 		
 		
 		//Example 4

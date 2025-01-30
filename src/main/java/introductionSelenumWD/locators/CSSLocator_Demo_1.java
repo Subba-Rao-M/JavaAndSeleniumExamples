@@ -33,7 +33,7 @@ public class CSSLocator_Demo_1 {
 		System.out.println(driver.findElements(By.cssSelector("input[type = 'radio']")).size());
 		
 		//tag, class name and attribute tag.className[attribute = 'value'] 
-		//Useful if there is any attribute value which is commoun under input type and class name
+		//Useful if there is any attribute value which is common under input type and class name
 		//Tagname is optional here also
 		
 		driver.findElement(By.cssSelector("input.btn-primary[type = 'submit']"));

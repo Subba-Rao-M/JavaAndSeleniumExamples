@@ -4,7 +4,7 @@ public class ReverseStringDemo_2 {
 
 	public static void main(String[] args) {
 		//Approach 2 - without using string methods
-		String s = "Welcome";
+		String s = "Welcome To java";
 		//Convert the string into Char array and in array it will be stored in same order
 		//Read last character first and so on and store in a variable
 		

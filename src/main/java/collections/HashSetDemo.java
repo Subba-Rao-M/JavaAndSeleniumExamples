@@ -56,7 +56,7 @@ public class HashSetDemo {
 			System.out.println(x);
 		}
 		
-		//Reading set data using iterator
+		//Reading set data using iterator interface which traverse through all elements
 		
 		Iterator it = myset.iterator();
 		
