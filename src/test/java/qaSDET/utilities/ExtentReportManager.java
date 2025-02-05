@@ -26,10 +26,13 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import qaSDET.testBase.BaseClass;
 
-public class ExtentReportManager implements ITestListener {
+
+
+public class ExtentReportManager extends BaseClass implements ITestListener {
 	public ExtentSparkReporter sparkReporter;
 	public ExtentReports extent;
 	public ExtentTest test;
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	String repName;
 
@@ -66,19 +69,28 @@ public class ExtentReportManager implements ITestListener {
 		if(!includedGroups.isEmpty()) { //If groups used then only execute this to display in group
 		extent.setSystemInfo("Groups", includedGroups.toString());
 		}
+	
+	}
+	
+	public void onTestStart(ITestResult result) {
+		test = extent.createTest(result.getMethod().getMethodName());
+		test.assignCategory(result.getMethod().getGroups());
+		extentTest.set(test);// unique thread id(ErrorValidationTest)->test
+		
 	}
 
 	public void onTestSuccess(ITestResult result) {
-	
-		test = extent.createTest(result.getTestClass().getName()); //Display result based on class name
-		test.assignCategory(result.getMethod().getGroups()); // to display groups in report
+		test = extentTest.get();
+		//test = extent.createTest(result.getTestClass().getName()); //Display result based on class name
+		//test.assignCategory(result.getMethod().getGroups()); // to display groups in report
 		test.log(Status.PASS,result.getName()+" got successfully executed");
 		
 	}
 
 	public void onTestFailure(ITestResult result) {
-		test = extent.createTest(result.getTestClass().getName());
-		test.assignCategory(result.getMethod().getGroups());
+		test = extentTest.get();
+	//	test = extent.createTest(result.getTestClass().getName());
+		//test.assignCategory(result.getMethod().getGroups());
 		
 		test.log(Status.FAIL,result.getName()+" got failed");
 		test.log(Status.INFO, result.getThrowable().getMessage());
@@ -90,9 +102,11 @@ public class ExtentReportManager implements ITestListener {
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
+		
 	}
 
 	public void onTestSkipped(ITestResult result) {
+		test = extentTest.get();
 		test = extent.createTest(result.getTestClass().getName());
 		test.assignCategory(result.getMethod().getGroups());
 		test.log(Status.SKIP, result.getName()+" got skipped");
@@ -139,10 +153,7 @@ public class ExtentReportManager implements ITestListener {
 	}
 
 	
-	public void onTestStart(ITestResult result) {
-		System.out.println(" onTestStart");
-		
-	}
+	
 
 	
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

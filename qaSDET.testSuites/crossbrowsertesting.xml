@@ -18,16 +18,16 @@
   <parameter name="os" value="Windows"></parameter>
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="qaSDET.testCases.TC_AccountRegistrationTest"/>
+      <class name="qaSDET.testCases.TC_LoginTest"/>
     </classes>
   </test> <!-- Test -->
   
-    <test name="Firefox Browser Testing">
+  <!--!  <test name="Firefox Browser Testing">
   <parameter name="os" value="Windows"></parameter>
   <parameter name="browser" value="firefox"></parameter>
     <classes>
       <class name="qaSDET.testCases.TC_AccountRegistrationTest"/>
     </classes>
-  </test> <!-- Test -->
+  </test>  Test -->
   
 </suite> <!-- Suite -->

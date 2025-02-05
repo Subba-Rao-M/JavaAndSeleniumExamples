@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngintegration.parameterization.DataProviderExcelDemo_3">
+      <class name="testngintegration.paralleltesting.LoginTestUsingDataProvider">
         <methods>
-          <include name="testDataProvider"/>
+          <include name="loginTest" invocation-numbers="2 0"/>
         </methods>
-      </class> <!-- testngintegration.parameterization.DataProviderExcelDemo_3 -->
+      </class> <!-- testngintegration.paralleltesting.LoginTestUsingDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

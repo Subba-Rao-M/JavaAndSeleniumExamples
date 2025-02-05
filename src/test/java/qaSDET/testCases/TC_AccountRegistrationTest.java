@@ -58,5 +58,6 @@ public class TC_AccountRegistrationTest extends BaseClass {
 	logger.info("Ending test case *** verify_Account_Registration *** ");
 	
 	}
+
 	
 }

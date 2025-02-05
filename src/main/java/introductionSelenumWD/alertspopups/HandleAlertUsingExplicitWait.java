@@ -27,6 +27,10 @@ public class HandleAlertUsingExplicitWait {
 		System.out.println(alert.getText());
 		alert.accept();
 		driver.close();
+		
+		/**
+		 * another option using java script executor
+		 */
 
 	}
 

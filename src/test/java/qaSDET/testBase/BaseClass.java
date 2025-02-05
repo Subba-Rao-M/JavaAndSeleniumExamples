@@ -24,27 +24,35 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import qaSDET.utilities.ConfigReader;
 
 public class BaseClass {
-	public static WebDriver driver;
+	
+	
+	public WebDriver driver;
 	public Logger logger;
-	public Properties prop;
+	public Properties properties;
+
 	
 	@BeforeClass(groups = {"Sanity", "Regression", "Master", "DataDriven"}, alwaysRun = true)
 	@Parameters({"os","browser"})
 	public void setUp(String os, String browser) throws IOException {
 		
 		FileReader file = new FileReader(".//src//test//resources//config.properties");
-		prop = new Properties();
-		prop.load(file);
+		properties = new Properties();
+		properties.load(file);
+		
+		/*ConfigReader configReader = new ConfigReader();
+		properties = configReader.getProperties(); // Load configuration properties*/
 		
 		System.setProperty("log4j.configurationFile",System.getProperty("user.dir")+"\\src\\test\\resources\\log4j2.xml");
 		logger = LogManager.getLogger(this.getClass());
 		System.out.println("Logger Initialized: " + (logger != null));
 		
-		if(prop.getProperty("execution_env").equalsIgnoreCase("remote")) {
+		if(properties.getProperty("execution_env").equalsIgnoreCase("remote")) {
 			logger.info("Remote environment execution");
 			logger.info("Test execution starts from remote machine");
 			String hubURL= "http://localhost:4444/wd/hub";
@@ -77,7 +85,7 @@ public class BaseClass {
 			driver = new RemoteWebDriver(new URL(hubURL), cap);
 		}
 			
-		else if(prop.getProperty("execution_env").equalsIgnoreCase("local")) {
+		else if(properties.getProperty("execution_env").equalsIgnoreCase("local")) {
 			logger.info("Local environment execution");
 			switch(browser.toLowerCase()) {
 			case "edge" : 	
@@ -99,12 +107,13 @@ public class BaseClass {
 		
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.get(prop.getProperty("appURL"));
+		driver.get(properties.getProperty("appURL"));
 		driver.manage().window().maximize();
 	}
 	
 	@AfterClass(groups = {"Sanity", "Regression", "Master", "DataDriven"}, alwaysRun = true)
 	public void tearDown() {
+		driver.close();
 		driver.quit();
 	}
 	

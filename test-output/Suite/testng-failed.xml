@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test SuccessFul Transactions(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="rs_TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Test Error Validations(failed)">
     <groups>
       <run>
         <include name="Purchase"/>
+        <include name="ErrorHandling"/>
       </run>
     </groups>
     <classes>
-      <class name="rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData">
+      <class name="rs_StandAloneTest.TC_03_TestErrorValidations">
         <methods>
-          <include name="OrderHistoryTest"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
-          <include name="testSubmitOrder" invocation-numbers="1"/>
-        </methods>
-      </class> <!-- rs_StandAloneTest.TC_04_TestSubmitOrderWithHashMapData -->
-      <class name="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated">
-        <methods>
-          <include name="OrderHistoryTest"/>
-          <include name="tearDown"/>
-          <include name="launchApplication"/>
-          <include name="testSubmitOrder" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- rs_StandAloneTest.TC_02_TestSubmitOrderUpdated -->
-      <class name="rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData">
-        <methods>
-          <include name="testSubmitOrder" invocation-numbers="1"/>
-          <include name="OrderHistoryTest"/>
+          <include name="testSubmitOrderWithInvalidProduct"/>
+          <include name="testInValidLoginForErrorMessage"/>
           <include name="tearDown"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- rs_StandAloneTest.TC_05_TestSubmitOrderWithJSONData -->
+      </class> <!-- rs_StandAloneTest.TC_03_TestErrorValidations -->
     </classes>
-  </test> <!-- Test SuccessFul Transactions(failed) -->
+  </test> <!-- Test Error Validations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

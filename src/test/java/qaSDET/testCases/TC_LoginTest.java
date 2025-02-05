@@ -24,8 +24,8 @@ public class TC_LoginTest extends BaseClass {
 		
 		logger.info("Enter user name and password");
 		LoginPage lp = new LoginPage(driver);
-		lp.setEmail(prop.getProperty("email"));
-		lp.setPassword(prop.getProperty("password"));
+		lp.setEmail(properties.getProperty("email"));
+		lp.setPassword(properties.getProperty("password"));
 		logger.info("Click on Login Button");
 		lp.clickLogin();
 		logger.info("Check if My Account page loaded");
