@@ -1,312 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="0" total="7" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-04T10:11:28 IST" name="Suite" finished-at="2025-02-04T10:12:13 IST" duration-ms="44882">
+  <suite started-at="2025-02-10T19:02:39 IST" name="Default suite" finished-at="2025-02-10T19:02:49 IST" duration-ms="10218">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="TC_03_TestErrorValidations.testInValidLoginForErrorMessage()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" name="testInValidLoginForErrorMessage" class="rs_StandAloneTest.TC_03_TestErrorValidations"/>
-        <method signature="TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" name="testSubmitOrderWithInvalidProduct" class="rs_StandAloneTest.TC_03_TestErrorValidations"/>
-      </group> <!-- ErrorHandling -->
-      <group name="Purchase">
-        <method signature="TC_02_TestSubmitOrderUpdated.testSubmitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" name="testSubmitOrder" class="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated"/>
-        <method signature="TC_02_TestSubmitOrderUpdated.OrderHistoryTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" name="OrderHistoryTest" class="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated"/>
-      </group> <!-- Purchase -->
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:rsCucumberFramework.cucumberOptions.FailedTestRunner@6913c1fb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-02-04T10:11:28 IST" name="Test Error Validations" finished-at="2025-02-04T10:12:11 IST" duration-ms="43078">
-      <class name="rs_StandAloneTest.TC_03_TestErrorValidations">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:11:28 IST" name="launchApplication" finished-at="2025-02-04T10:11:32 IST" duration-ms="3949" status="PASS">
+    <test started-at="2025-02-10T19:02:39 IST" name="Default test" finished-at="2025-02-10T19:02:49 IST" duration-ms="10218">
+      <class name="rsCucumberFramework.cucumberOptions.FailedTestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:rsCucumberFramework.cucumberOptions.FailedTestRunner@6913c1fb]" started-at="2025-02-10T19:02:39 IST" name="setUpClass" finished-at="2025-02-10T19:02:39 IST" duration-ms="681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4a0df195]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testInValidLoginForErrorMessage()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:11:32 IST" name="testInValidLoginForErrorMessage" finished-at="2025-02-04T10:11:55 IST" duration-ms="23238" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[class*='flyInOut']"}
-  (Session info: chrome=132.0.6834.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [25b1b3ee9f88e7758fd01322552e4750, findElement {using=css selector, value=[class*='flyInOut']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\raooosub\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49702/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 25b1b3ee9f88e7758fd01322552e4750]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[class*='flyInOut']"}
-  (Session info: chrome=132.0.6834.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.12.1', revision: '8e34639b11'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [25b1b3ee9f88e7758fd01322552e4750, findElement {using=css selector, value=[class*='flyInOut']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.160, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\raooosub\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49702}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49702/devtoo..., se:cdpVersion: 132.0.6834.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 25b1b3ee9f88e7758fd01322552e4750
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy33.getText(Unknown Source)
-at rs_PageObjects.LandingPage.getLoginErrorMessage(LandingPage.java:45)
-at rs_StandAloneTest.TC_03_TestErrorValidations.testInValidLoginForErrorMessage(TC_03_TestErrorValidations.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInValidLoginForErrorMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:11:56 IST" name="tearDown" finished-at="2025-02-04T10:11:56 IST" duration-ms="293" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:11:56 IST" name="launchApplication" finished-at="2025-02-04T10:11:59 IST" duration-ms="3465" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="testSubmitOrderWithInvalidProduct()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:11:59 IST" name="testSubmitOrderWithInvalidProduct" finished-at="2025-02-04T10:12:03 IST" duration-ms="3269" status="SKIP">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:rsCucumberFramework.cucumberOptions.FailedTestRunner@6913c1fb]" started-at="2025-02-10T19:02:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-10T19:02:48 IST" duration-ms="8630" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search Experience for product search in both home and Offers page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Search and Place the order for Products"]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[expected [Beetroot] but found [No data]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [Beetroot] but found [No data]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at rs_StandAloneTest.TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct(TC_03_TestErrorValidations.java:37)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at rsCucumberFramework.stepDefinitions.OfferPageStepDefinition.validate_product_name_in_Offers_page(OfferPageStepDefinition.java:44)
+at ✽.validate product name in offers page matches with Landing Page(file:///C:/Learning%20Materials/MyAutomationLearning/JavaAndSeleniumExamples/JavaAndSeleniumExamples/src/test/java/rsCucumberFramework/features/SearchProduct.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSubmitOrderWithInvalidProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:12:03 IST" name="tearDown" finished-at="2025-02-04T10:12:04 IST" duration-ms="1816" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:rsCucumberFramework.cucumberOptions.FailedTestRunner@6913c1fb]" started-at="2025-02-10T19:02:48 IST" name="tearDownClass" finished-at="2025-02-10T19:02:49 IST" duration-ms="872" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:12:04 IST" name="launchApplication" finished-at="2025-02-04T10:12:06 IST" duration-ms="1951" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testSubmitOrderWithInvalidProduct()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:12:06 IST" name="testSubmitOrderWithInvalidProduct" finished-at="2025-02-04T10:12:10 IST" duration-ms="3594" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at rs_StandAloneTest.TC_03_TestErrorValidations.testSubmitOrderWithInvalidProduct(TC_03_TestErrorValidations.java:37)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSubmitOrderWithInvalidProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_03_TestErrorValidations@3eb91815]" started-at="2025-02-04T10:12:10 IST" name="tearDown" finished-at="2025-02-04T10:12:11 IST" duration-ms="617" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- rs_StandAloneTest.TC_03_TestErrorValidations -->
-    </test> <!-- Test Error Validations -->
-    <test started-at="2025-02-04T10:11:28 IST" name="Test SuccessFul Transactions" finished-at="2025-02-04T10:12:13 IST" duration-ms="44882">
-      <class name="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:11:28 IST" name="launchApplication" finished-at="2025-02-04T10:11:35 IST" duration-ms="7258" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testSubmitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:11:35 IST" name="testSubmitOrder" data-provider="getData" finished-at="2025-02-04T10:11:39 IST" duration-ms="3701" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[subbaraw@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Span@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[IPHONE 13 PRO]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSubmitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:11:39 IST" name="tearDown" finished-at="2025-02-04T10:11:39 IST" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:11:39 IST" name="launchApplication" finished-at="2025-02-04T10:11:42 IST" duration-ms="3338" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testSubmitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:11:42 IST" name="testSubmitOrder" data-provider="getData" finished-at="2025-02-04T10:11:59 IST" duration-ms="16652" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[subbaraw@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Span@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[QWERTY]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSubmitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:11:59 IST" name="tearDown" finished-at="2025-02-04T10:12:02 IST" duration-ms="2536" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:12:02 IST" name="launchApplication" finished-at="2025-02-04T10:12:04 IST" duration-ms="2465" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:12:04 IST" name="OrderHistoryTest" data-provider="getData" finished-at="2025-02-04T10:12:06 IST" depends-on-methods="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated.testSubmitOrder" duration-ms="1437" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[subbaraw@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Span@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[IPHONE 13 PRO]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:12:06 IST" name="tearDown" finished-at="2025-02-04T10:12:08 IST" duration-ms="2092" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:12:08 IST" name="launchApplication" finished-at="2025-02-04T10:12:11 IST" duration-ms="3696" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:12:11 IST" name="OrderHistoryTest" data-provider="getData" finished-at="2025-02-04T10:12:12 IST" depends-on-methods="rs_StandAloneTest.TC_02_TestSubmitOrderUpdated.testSubmitOrder" duration-ms="1122" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[subbaraw@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Span@1234]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[QWERTY]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rs_StandAloneTest.TC_02_TestSubmitOrderUpdated@64b0598]" started-at="2025-02-04T10:12:12 IST" name="tearDown" finished-at="2025-02-04T10:12:13 IST" duration-ms="264" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- rs_StandAloneTest.TC_02_TestSubmitOrderUpdated -->
-    </test> <!-- Test SuccessFul Transactions -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- rsCucumberFramework.cucumberOptions.FailedTestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

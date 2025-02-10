@@ -45,7 +45,7 @@ package exceptionHandling;
  *	
  * 21. SessionNot found exception - after quitting browser and performing further action
  * 
- * 22.
+ * 22.Undefinedstep exception - on running cucumber featured file without mapped step definition
  */
 
 public class SeleniumExceptions {

@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngintegration.paralleltesting.LoginTestUsingDataProvider">
+      <class name="rsCucumberFramework.cucumberOptions.FailedTestRunner">
         <methods>
-          <include name="loginTest" invocation-numbers="2 0"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- testngintegration.paralleltesting.LoginTestUsingDataProvider -->
+      </class> <!-- rsCucumberFramework.cucumberOptions.FailedTestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

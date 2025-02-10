@@ -1,0 +1,237 @@
+BDD - Behavior driven development
+BDD is development approach which involves usage of common language which technical and non technical peoples can understand.
+Tests are more used focused based on system behavior
+Given When and Then are proposed approach for writing test cases
+
+
+Cucumber is a tool/framework which supports BDD
+Cucumber is the BDD Framework for running automated tests. 
+Cucumber does not Automate your testcases!
+
+What is Framework?
+In any Real time project whenever Automation scripts are developed, 
+One should come up with an Execution system called framework to run and maintain Automated tests
+
+
+Difference between Selenium and Cucumber
+
+Selenium is a tool to design web automation tests
+Cucumber helps to design framework for selenium automation tests written in BDD standard
+
+When my tests are already automated and can run, what cucumber does? 
+Data driven, Parameterization, Execution controls, Hooks, Reports, Automation utilities and many more….
+When you say automated tests, what type of Automation testcases does cucumber Support?
+Any Test (Web, Mobile, API, Unit Testing) which is written in Java/Ruby supported by Cucumber
+
+How cucumber is unique and Best from other Test Frameworks (Keyword, Datadriven,Hybrid) in the Market?
+Because Testcases/Requirements are defined with on BDD methodology (Gherkin syntax)
+No coding is required to implement Framework functionalities
+
+
+
+Cucumber Dependencies:
+cucumber eclipse plugin from market place
+testng for eclipse
+
+POM file:
+Cucumber java from io cucumber
+testng
+
+
+Cucumber Terminologies:
+What is Gherkin? 
+ It is a Business Readable, Domain Specific Language  that lets you describe software's behavior.
+Example: Pop up messaged is displayed when buttons are clicked and errors are gone	
+
+Keywords Used in Cucumber: Scenario, Feature, Feature file, Scenario outline, Step Definition
+
+Scenarios:
+In Cucumber Testcases are represented as Scenarios.
+Scenarios contain Steps which are equivalent to test Steps and use the following keywords (Gherkin syntax) to denote them: Given, When, Then, But, and And (case sensitive).
+•	Given: Preconditions are mentioned in the Given keyword
+•	When: The purpose of the When Steps is to describe the user action.
+•	Then: The purpose of Then Steps is to observe the expected output. The observations should be related to the business value/benefit of your Feature description.
+
+When we specify a business requirement, sometimes there are multiple pre-conditions, user actions, and expected outcomes
+
+we are going to add one more Scenario and will use the And and But keywords:
+
+•	And: This is used for statements that are an addition to the previous Steps and represent positive statements.
+•	But: This is used for statements that are an addition to previous Steps and represent negative statements.
+
+
+
+
+
+Feature and Feature File:
+Feature represents Business requirement.
+Feature File acts as a Test Suite which consists of all Scenarios.
+
+In Cucumber, Feature files contain Scenarios. We can simply create feature file with. feature extension
+Scenarios belonging to specific area of Application will be grouped into one Feature file
+
+The text that immediately follows the Feature keyword, and is in the same line, is the Title of the Feature file
+ Feature file should contain either Scenario or Scenario Outline. The naming conventions for Feature files should be lowercase with. feature extension 
+
+ Feature: Credit card payment
+  In order to test Credit Card Payment functionality
+  As a CC user
+  I want to complete the payment through online
+
+  Scenario: Make Minimum Due payment 
+    Given user is on Pay credit card page
+    Then user fills all details and select Minimum amount option
+    And User clicks on Pay button
+	Then Credit Card confirmation page is displayed
+
+  Scenario: Pay Statement Balance 
+    Given user is on Pay credit card page
+    Then user fills all details and select Statement Balance option
+    And User clicks on Pay button
+	Then Credit Card confirmation page is displayed
+
+
+  Scenario: Enter another Amount as 0
+    Given user is on Pay credit card page
+    Then user fills all details and select other Amount and enter 0
+    And User clicks on Pay button
+	Then Credit Card confirmation page is not displayed
+	But error message is displayed
+
+	
+Feature file is like test suite and scenario is like test cases
+Step definition file where core logic for scenario steps written in java 
+Test runner using junit or testng - used to run the scenarios like trigger file
+TestNg testrunner class extends AbstractTestNGCucumberTest class to run the feature file
+Junit will have annotation runwith in runner class
+Re-use common steps across project and feature files so it reduces the number of steps and also improves maintainability and re-usability
+Use variables in common step to pass different values and in function use {datatype} to receive it
+All given steps from featrure file is collected first on execution
+
+Scenario outline will run the steps n number of times by using the data for variables used for paramterization and data provided in Examples table
+
+For scenario different values are passed as "value" for common steps
+For scenario outline variables to pass different values form example tables is written as "<variable name>"
+
+Regex patterns in Step definitions file:
+
+For string {String} is used
+for int {int}
+if any other data type and use it as string parameter in function
+start the step definition with ^
+End the step definition with $
+for variables use (.+)
+Regular expression with consider the values based on regex even if data is not marked under ""
+
+Data driven testing using cucumber feature file:
+
+If more than 3 fields add the data below step in feature file with ||
+in step definition DataTable class is used to pull the data into list i.e List<String> data
+to retrieve the data use data.get(0)
+
+Difference between scenario outline and data driven test
+
+scenario outline maintains data for entire scenario in different steps and iterates multiple times
+data driven test maintains data for only for the above step and executes one time
+
+Cucumber tags:
+To filter the scenarios on execution
+Tags for scenarios
+Tags for features
+Tags for negation tags = "not @RegressionTest" -- run scenarios with tags which dont have RegressionTest 
+
+
+Background
+common initial configuration steps related to all scenarios are moved here
+the scope of background steps is within feature file only and not applicable for scenarios in other feature file
+steps like setting up database, deleting the data before execution, launch browser etc configurations can be added here
+
+Cucumber hooks:
+similar to background
+but with additional advantages
+Create a class with Hooks under stepdefinitions
+add the steps which needs to be executed before scenario based on tags using annotation Before
+Background is scoped within feature file but Hooks applicable for all feature files
+if pre-condition changes based on scenarios use hooks or use it as steps within scenario only
+Before and after annotations code can be added
+Before - background - scenario - after --> order of execution
+
+Reports in cucumber:
+Controlled from test runner using plugin option
+monochrome - to print the console out put
+pretty-html - to make html report colorful
+"html: target/cucumber.html"
+report in html or json format can be generated
+using json report helps to generate report using 3rd party tools and jenkins integration
+dryRun=true - > makes sure if feature file has all associated code for scenario steps. Used for compiling when large number of feature file availabe to identify if any step definition is missing before execution only
+
+Common Problems:
+write and maintain re-usable codes - by using common steps smartly for multiple scenarios
+Driving the data - > using data driven tests for steps 
+parameterizing the tests using scenario outline and examples table
+100% test coverage - > Using feature file you will come to know whats the coverage done for feature
+Running using single click - using testrunner file
+Controlling the test execution - Using tags for scenarios and give it in test runner to run only few test cases
+Logic to separate test code - Using background for pre condition and also hooks for pre and post conditions
+Generating report - using plugin in testng runner
+
+
+Framework: 
+glue - automatically checks in source/test java for step definition and if it is different then manually we need to specify with package reference path
+
+Step Defintion:
+Break the step definition file based on pages or modules in application considering complexity
+Nullpointer exception when moving control from initial page to next pages
+To avoid this cucumber dependency injection should be done
+Cucumber dependency injection using picocontainer(cucmber jvm picocontainer dependency added in pom file)
+Create Test Context under utility - to inform what are the different common properties shared across step definition files
+Create constructor in each step definition and add the test context parameter to constructor
+initialize step drivers using test context global driver
+
+Importance of single responsibility principle 
+and classes should be loosely coupled by injecting dependencies
+commonly used design pattern
+Methods also should have single responsibility and loosely coupled
+
+Page Object patterns:
+writing locator in step definition file is not good
+Create page specific classes to hold locators and page specific methods
+
+Factory design patterns
+class responsible creating objects called page object manager
+return objects created based on pages called
+Create WebDriver Manager - factory manager concept also can be used to return driver
+
+TestContextsetup will provide driver to all classes for intialization and closing
+Create hooks to close the browser after each scenario
+
+
+Running tests in parallel - > in testrunner file update the code to run from abstracttestngcucumbertest class
+super.scenarios has option to run scenarios parallel
+override above method and add dataprovider annotations with parallel true
+
+Object creation can be done in constructor if same object is used in multiple methods of step definition
+
+default html and json reports are supported using plugin option
+add in pom file - Extent report from avenstak, and extent report with cucumber 7 adapter, add details in test runner plugin option
+create extent.properties file
+Add method to take screenshot if scenario is failed
+add the key values for screenshots path in extent.properties file
+
+How to rerun the failed scenarios: 
+add in plugin rerun related document path to captured failed scenario
+if scenario outline only failed parameterized step data will be pointed
+Create one more java class to run only failed test cases and give the path from above line 
+
+Running as maven project
+parameters or tags from command line takes priority over tags/p mentioned in test runner class
+
+mvn test -Dcucumber.filter.tags="@PlaceOrder"
+mvn test -Dcucumber.features="path src/test/features/... .feature"
+
+controlling global properties using command line like browser, url etc by overwriting global.properties data
+mvn test -Dcucumber.filter.tags="@PlaceOrder" -Dbrowser=Chrome
+Logic should be written to capture the custom properties and use ternary operator to use maven property or from properties file
+In Jenkins add choice parameters to select browser, select the tags to run the test cases
+
+
