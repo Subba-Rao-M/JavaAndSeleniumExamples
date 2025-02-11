@@ -235,3 +235,8 @@ Logic should be written to capture the custom properties and use ternary operato
 In Jenkins add choice parameters to select browser, select the tags to run the test cases
 
 
+For Junit project remove all testng dependencies and add cucumber junit dependencies
+remove testng dependencies and remove testng abstract runner methods including assertion dependency update to junit
+Running junit test cases in parallel:
+Refer junit documentation and add plugin details for surefire plugin. Only using mavel we can run in parallel.
+In junit only feature files run parallely and not scenarios. Scenarios from feature file run sequentially
